@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajabinandhan PG - Cybersecurity Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) rotateX(5deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, white, #f0f0f0);
+            color: #1e3c72;
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1e3c72;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 4px solid #fff;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .profile-img:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateZ(10px);
+        }
+
+        .profile-img::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ff6b6b, #1e3c72, #2a5298, #ff6b6b);
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 4s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e3c72;
+        }
+
+        .profile-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: #1e3c72;
+            text-decoration: none;
+        }
+
+        .about-text {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        .about-text:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+
+        .skill-category:hover::before {
+            left: 100%;
+        }
+
+        .skill-category h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #1e3c72;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(30, 60, 114, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            box-shadow: 0 10px 25px rgba(30, 60, 114, 0.3);
+        }
+
+        /* Experience */
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px) rotateY(5deg);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 30px;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #1e3c72, #ff6b6b);
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(30, 60, 114, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            color: #1e3c72;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .job-company {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .job-date {
+            color: #999;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .job-description ul {
+            list-style-position: inside;
+            color: #666;
+        }
+
+        .job-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3c72, #ff6b6b, #2a5298);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.15), 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Education & Certifications */
+        .edu-cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .edu-cert-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+        }
+
+        .edu-cert-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+
+        .edu-cert-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .edu-item, .cert-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .edu-item:last-child, .cert-item:last-child {
+            border-bottom: none;
+        }
+
+        .edu-degree, .cert-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-school, .cert-issuer {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: #1e3c72;
+        }
+
+        /* Cybersecurity 3D Elements */
+        .cyber-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .binary-rain {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: rgba(0, 255, 0, 0.3);
+            animation: matrix 10s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes matrix {
+            0% { transform: translateY(-100vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        .floating-shield {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.2), rgba(255, 107, 107, 0.2));
+            border: 2px solid rgba(0, 255, 0, 0.3);
+            border-radius: 15px;
+            animation: float-rotate 8s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .floating-shield::before {
+            content: '🛡️';
+            filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
+        }
+
+        @keyframes float-rotate {
+            0%, 100% { transform: translateY(0px) rotateZ(0deg) rotateX(0deg); }
+            33% { transform: translateY(-30px) rotateZ(120deg) rotateX(10deg); }
+            66% { transform: translateY(-15px) rotateZ(240deg) rotateX(-10deg); }
+        }
+
+        .network-node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #00ff00;
+            animation: pulse-node 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-node {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        .code-fragment {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: rgba(255, 107, 107, 0.4);
+            background: rgba(0, 0, 0, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 107, 107, 0.2);
+            animation: drift 15s linear infinite;
+            backdrop-filter: blur(5px);
+        }
+
+        @keyframes drift {
+            0% { transform: translateX(-100px) translateY(0px) rotateZ(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(calc(100vw + 100px)) translateY(-50px) rotateZ(360deg); opacity: 0; }
+        }
+
+        .hex-pattern {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid rgba(30, 60, 114, 0.2);
+            animation: hex-float 12s ease-in-out infinite;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+        }
+
+        @keyframes hex-float {
+            0%, 100% { transform: translateY(0px) rotateZ(0deg); opacity: 0.3; }
+            50% { transform: translateY(-40px) rotateZ(180deg); opacity: 0.8; }
+        }
+
+        .terminal-cursor {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: #00ff00;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Enhanced Floating Elements */
+        .floating-cube {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.1), rgba(255, 107, 107, 0.1));
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            border-radius: 10px;
+            animation: float 6s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .floating-cube:nth-child(1)::before { content: '💻'; }
+        .floating-cube:nth-child(2)::before { content: '🔒'; }
+        .floating-cube:nth-child(3)::before { content: '🌐'; }
+        .floating-cube:nth-child(4)::before { content: '⚡'; }
+        .floating-cube:nth-child(5)::before { content: '🔍'; }
+
+        .floating-cube:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-cube:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
+        .floating-cube:nth-child(3) { top: 60%; left: 5%; animation-delay: 4s; }
+        .floating-cube:nth-child(4) { bottom: 20%; right: 15%; animation-delay: 1s; }
+        .floating-cube:nth-child(5) { top: 80%; left: 20%; animation-delay: 3s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+            50% { transform: translateY(-20px) rotateZ(10deg); }
+        }
+
+        /* 3D Section Headers */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+            text-shadow: 0 5px 15px rgba(30, 60, 114, 0.2);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3c72, #ff6b6b);
+            border-radius: 2px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .section-title:hover {
+            transform: rotateX(5deg) translateY(-5px);
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .edu-cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .section-alt {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cybersecurity 3D Elements -->
+    <div class="cyber-elements">
+        <!-- Binary Rain -->
+        <div class="binary-rain" style="left: 5%; animation-delay: 0s;">01001000 01100001 01100011 01101011</div>
+        <div class="binary-rain" style="left: 15%; animation-delay: 2s;">01010011 01100101 01100011 01110101</div>
+        <div class="binary-rain" style="left: 25%; animation-delay: 4s;">01000011 01111001 01100010 01100101</div>
+        <div class="binary-rain" style="left: 35%; animation-delay: 1s;">01000110 01101001 01110010 01100101</div>
+        <div class="binary-rain" style="left: 45%; animation-delay: 3s;">01001110 01100101 01110100 01110111</div>
+        <div class="binary-rain" style="left: 55%; animation-delay: 5s;">01000100 01100001 01110100 01100001</div>
+        <div class="binary-rain" style="left: 65%; animation-delay: 2.5s;">01000011 01101111 01100100 01100101</div>
+        <div class="binary-rain" style="left: 75%; animation-delay: 4.5s;">01001000 01100001 01110011 01101000</div>
+        <div class="binary-rain" style="left: 85%; animation-delay: 1.5s;">01010010 01101111 01101111 01110100</div>
+        <div class="binary-rain" style="left: 95%; animation-delay: 3.5s;">01000001 01100100 01101101 01101001</div>
+
+        <!-- Floating Shields -->
+        <div class="floating-shield" style="top: 15%; left: 80%; animation-delay: 0s;"></div>
+        <div class="floating-shield" style="top: 70%; left: 90%; animation-delay: 3s;"></div>
+        <div class="floating-shield" style="top: 40%; left: 5%; animation-delay: 6s;"></div>
+
+        <!-- Network Nodes -->
+        <div class="network-node" style="top: 30%; left: 20%; animation-delay: 0s;"></div>
+        <div class="network-node" style="top: 50%; left: 70%; animation-delay: 1s;"></div>
+        <div class="network-node" style="top: 80%; left: 40%; animation-delay: 2s;"></div>
+        <div class="network-node" style="top: 10%; left: 60%; animation-delay: 1.5s;"></div>
+
+        <!-- Code Fragments -->
+        <div class="code-fragment" style="top: 25%; animation-delay: 0s;">function encrypt(data) {</div>
+        <div class="code-fragment" style="top: 45%; animation-delay: 5s;">SELECT * FROM users;</div>
+        <div class="code-fragment" style="top: 65%; animation-delay: 10s;">nmap -sS -O target</div>
+        <div class="code-fragment" style="top: 85%; animation-delay: 7s;">wireshark -i eth0</div>
+
+        <!-- Hex Patterns -->
+        <div class="hex-pattern" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+        <div class="hex-pattern" style="top: 60%; left: 80%; animation-delay: 4s;"></div>
+        <div class="hex-pattern" style="top: 90%; left: 10%; animation-delay: 8s;"></div>
+
+        <!-- Terminal Cursors -->
+        <div class="terminal-cursor" style="top: 35%; left: 25%;"></div>
+        <div class="terminal-cursor" style="top: 75%; left: 85%;"></div>
+    </div>
+
+    <!-- Enhanced Floating Tech Elements -->
+    <div class="floating-elements">
+        <div class="floating-cube"></div>
+        <div class="floating-cube"></div>
+        <div class="floating-cube"></div>
+        <div class="floating-cube"></div>
+        <div class="floating-cube"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-bg"></div>
+        <div class="container">
+            <div class="hero">
+                <h1>Rajabinandhan Periyagoundanoor Gopal</h1>
+                <p class="subtitle">Cybersecurity Professional & IT Specialist</p>
+                <p class="tagline">Freelancer skilled in IT support, custom solutions, and cybersecurity, specializing in network storage, threat mitigation, and incident response.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-info">
+                        <h3>Rajabinandhan PG</h3>
+                        <p>Cyber Security Analyst</p>
+                        <div class="contact-info">
+                            <span>📍 Chicago, IL</span>
+                            <span>📧 <a href="mailto:rajabinandhanpg@gmail.com">rajabinandhanpg@gmail.com</a></span>
+                            <span>📱 +1(312) 866-1175</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Professional Summary</h3>
+                    <p>Versatile Cybersecurity Professional and IT Specialist with expertise in penetration testing, digital forensics, and custom solution development. Skilled in security analysis, network architecture, and incident response with a proven track record of supporting multiple businesses simultaneously.</p>
+                    <p>Extensive experience in data recovery, mobile device repair, and complex system troubleshooting across diverse platforms. Dedicated to implementing robust security measures and delivering exceptional technical solutions.</p>
+                    <p>Currently supporting 12 companies in Crystal Lake, IL while pursuing advanced cybersecurity practices and maintaining a strong focus on proactive threat mitigation and business continuity solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">R</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cybersecurity Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Burpsuite</span>
+                        <span class="skill-tag">John the Ripper</span>
+                        <span class="skill-tag">Sqlmap</span>
+                        <span class="skill-tag">Kali Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Systems & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">macOS</span>
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Cloud Computing</span>
+                        <span class="skill-tag">Virtualization</span>
+                        <span class="skill-tag">pfSense</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Specialty Areas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Digital Forensics</span>
+                        <span class="skill-tag">OSINT</span>
+                        <span class="skill-tag">Vulnerability Assessment</span>
+                        <span class="skill-tag">Incident Response</span>
+                        <span class="skill-tag">Data Recovery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Cyber Security Analyst</div>
+                            <div class="job-company">Aditas Solutions</div>
+                        </div>
+                        <div class="job-date">Apr 2024 - Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Execute comprehensive network reconnaissance and penetration testing using tools like Nmap, SQLmap, and Metasploit</li>
+                            <li>Develop and implement OSINT techniques for threat intelligence gathering</li>
+                            <li>Conduct digital forensics investigations to identify breach pathways and recover compromised data</li>
+                            <li>Lead security awareness training sessions and implement password security protocols</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Hardware/Software Specialist</div>
+                            <div class="job-company">Freelancer</div>
+                        </div>
+                        <div class="job-date">Nov 2018 - Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Currently supporting 12 companies including Onemain Fin, Lender Match, Games R us in Crystal Lake, IL</li>
+                            <li>Design and implement enterprise-grade NAS solutions with redundancy using OpenSNS on Raspberry Pi</li>
+                            <li>Perform specialized logical data recovery services for local businesses</li>
+                            <li>Architect sophisticated virtualized environments with Proxmox and self-hosted CRM systems</li>
+                            <li>Deploy advanced network security configurations including pfSense VLAN implementations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Amazon Games Specialist</div>
+                            <div class="job-company">Amazon Games</div>
+                        </div>
+                        <div class="job-date">Dec 2021 - Jun 2022</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Served as Subject Matter Expert on the launch team for "Lost Ark"</li>
+                            <li>Implemented security protocols for anti-cheat systems using network analysis tools</li>
+                            <li>Developed data-driven solutions achieving 97% positive feedback and 38% faster response time</li>
+                            <li>Created console applications to automate testing procedures and streamline debugging workflows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Acme Penetration Testing</h3>
+                    <p>Led a comprehensive penetration testing project to identify and assess vulnerabilities in network systems, utilizing tools like Kali Linux, Nmap, and John the Ripper. Successfully uncovered critical security weaknesses and proposed effective mitigation strategies.</p>
+                    <a href="https://github.com/RajabinandhanPG/Acme_Pentesting" class="project-link">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Digital Forensics Investigation</h3>
+                    <p>Conducted comprehensive digital forensic analysis of compromised systems, successfully recovering critical evidence using specialized forensic tools. Documented complete investigation methodology and findings in detailed technical reports.</p>
+                    <a href="https://github.com/RajabinandhanPG/Cyber_Forensics_Investigation" class="project-link">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>OSINT Dashboard</h3>
+                    <p>Developed a Python-based open-source intelligence gathering tool with Tkinter GUI that efficiently scrapes and analyzes user data from major social media platforms including Twitter, Facebook, and Instagram.</p>
+                    <a href="#" class="project-link">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Secure Enterprise NAS Implementation</h3>
+                    <p>Designed and deployed a comprehensive network storage solution using a Linkin NAS system with advanced security protocols, encryption, and access controls to safeguard sensitive customer data.</p>
+                    <a href="#" class="project-link">Learn More →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Advanced TTS Application</h3>
+                    <p>Engineered a full-stack web application that seamlessly integrates multiple text-to-speech APIs with AI text generation services. Features modular architecture with separate frontend/backend components.</p>
+                    <a href="#" class="project-link">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Multi-Function Home Server Infrastructure</h3>
+                    <p>Architected a sophisticated home server environment featuring network isolation through pfSense VLAN configuration, demonstrating advanced networking and system integration capabilities.</p>
+                    <a href="#" class="project-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="edu-cert-grid">
+                <div class="edu-cert-card">
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <div class="edu-degree">Master of Cyber Forensics and Security</div>
+                        <div class="edu-school">Illinois Institute of Technology</div>
+                        <div class="edu-school">Expected Dec 2024</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Bachelor of Computer Application</div>
+                        <div class="edu-school">Sri Krishna Arts and Science College</div>
+                        <div class="edu-school">2018 - 2021</div>
+                    </div>
+                </div>
+                <div class="edu-cert-card">
+                    <h3>Certifications</h3>
+                    <div class="cert-item">
+                        <div class="cert-name">CompTIA Security+ (SY0-601)</div>
+                        <div class="cert-issuer">Valid through December 2026</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">CyberDefence Pro</div>
+                        <div class="cert-issuer">Global InfoSec Institute, 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Jones & Bartlett Forensics Certificate</div>
+                        <div class="cert-issuer">2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Unreal Engine 5 Fundamentals</div>
+                        <div class="cert-issuer">Epic Games, 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Programming Certifications</div>
+                        <div class="cert-issuer">R, Python, Java, C++</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">
+                    Ready to discuss cybersecurity solutions or IT projects? I'm always open to new opportunities and collaborations.
+                </p>
+                <div class="footer-content">
+                    <div class="social-links">
+                        <a href="mailto:rajabinandhanpg@gmail.com">Email</a>
+                        <a href="https://github.com/RajabinandhanPG">GitHub</a>
+                        <a href="https://www.linkedin.com/in/raj-abinandhanpg/">LinkedIn</a>
+                        <a href="https://linktr.ee/RajabinandhanPG">Linktree</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rajabinandhan Periyagoundanoor Gopal. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">Cybersecurity Professional | IT Specialist | Chicago, IL</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load user's profile image
+        async function loadProfileImage() {
+            const profileImg = document.querySelector('.profile-img');
+            
+            // TODO: Replace this URL with your actual hosted image
+            // For now, using a professional placeholder
+            // You can upload your image to any hosting service (GitHub, Imgur, Cloudinary, etc.)
+            // and replace this URL with your image URL
+            
+            const yourImageUrl = '/api/placeholder/200/200'; // Replace with your actual image URL
+            
+            try {
+                profileImg.style.backgroundImage = `url('${yourImageUrl}')`;
+                console.log('Profile image loaded successfully');
+            } catch (error) {
+                console.log('Using placeholder image');
+                // Fallback SVG avatar
+                const svgAvatar = `data:image/svg+xml;base64,${btoa(`
+                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="95" fill="url(#grad)" />
+                        <text x="100" y="110" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">RPG</text>
+                    </svg>
+                `)}`;
+                profileImg.style.backgroundImage = `url('${svgAvatar}')`;
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.backdropFilter = 'blur(10px)';
+            } else {
+                nav.style.background = 'white';
+                nav.style.backdropFilter = 'none';
+            }
+        });
+
+        // Generate dynamic network connections
+        function createNetworkConnections() {
+            const cyberElements = document.querySelector('.cyber-elements');
+            
+            // Create connection lines between network nodes
+            const nodes = document.querySelectorAll('.network-node');
+            nodes.forEach((node, index) => {
+                if (index < nodes.length - 1) {
+                    const line = document.createElement('div');
+                    line.className = 'network-connection';
+                    line.style.cssText = `
+                        position: absolute;
+                        height: 1px;
+                        background: linear-gradient(90deg, #00ff00, transparent);
+                        animation: pulse-line 2s ease-in-out infinite;
+                        opacity: 0.3;
+                    `;
+                    
+                    // Calculate position between nodes
+                    const rect1 = node.getBoundingClientRect();
+                    const rect2 = nodes[index + 1].getBoundingClientRect();
+                    
+                    cyberElements.appendChild(line);
+                }
+            });
+        }
+
+        // Add CSS for network connections
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse-line {
+                0%, 100% { opacity: 0.1; transform: scaleX(0.5); }
+                50% { opacity: 0.5; transform: scaleX(1); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProfileImage();
+            setTimeout(createNetworkConnections, 1000);
+        });
+    </script>
+</body>
+</html>
