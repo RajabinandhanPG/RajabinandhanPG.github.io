@@ -227,6 +227,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            z-index: 2;
         }
 
         .profile-img:hover {
@@ -240,11 +241,11 @@
             left: -10px;
             right: -10px;
             bottom: -10px;
-            background: linear-gradient(45deg, #ff6b6b, #1e3c72, #2a5298, #ff6b6b);
+            background: linear-gradient(45deg, #1e3c72, #2a5298, #ff6b6b, #1e3c72);
             border-radius: 50%;
             z-index: -1;
             animation: rotate 4s linear infinite;
-            opacity: 0.7;
+            opacity: 0.6;
         }
 
         @keyframes rotate {
@@ -810,7 +811,7 @@
     </style>
 </head>
 <body>
-    <!-- Cybersecurity 3D Elements -->
+            <!-- Cybersecurity 3D Elements -->
     <div class="cyber-elements">
         <!-- Binary Rain -->
         <div class="binary-rain" style="left: 5%; animation-delay: 0s;">01001000 01100001 01100011 01101011</div>
@@ -1153,38 +1154,65 @@
     </footer>
 
     <script>
-        // Load user's profile image from GitHub
+        // Enhanced image loading with better debugging
         async function loadProfileImage() {
             const profileImg = document.querySelector('.profile-img');
             
-            // GitHub image URL - replace this with your actual GitHub repository and image path
-            // Format: https://username.github.io/repository-name/images/image-filename.extension
-            const githubImageUrl = './images/profile.jpg'; // This assumes your image is named profile.jpg
+            // Multiple image path options to try
+            const imagePaths = [
+                './images/profile.jpg',
+                'https://RajabinandhanPG.github.io/images/profile.jpg',
+                'images/profile.jpg'
+            ];
             
-            // Alternative formats you might use:
-            // const githubImageUrl = './images/profile.png'; 
-            // const githubImageUrl = 'https://RajabinandhanPG.github.io/images/profile.jpg';
+            console.log('Starting image load process...');
             
-            try {
-                // Test if the image exists
-                const img = new Image();
-                img.onload = function() {
-                    profileImg.style.backgroundImage = `url('${githubImageUrl}')`;
-                    console.log('Profile image loaded successfully from GitHub');
-                };
-                img.onerror = function() {
-                    console.log('GitHub image not found, using fallback');
-                    loadFallbackImage();
-                };
-                img.src = githubImageUrl;
+            // Try each image path
+            for (let i = 0; i < imagePaths.length; i++) {
+                const currentPath = imagePaths[i];
+                console.log(`Trying image path ${i + 1}: ${currentPath}`);
                 
-            } catch (error) {
-                console.log('Error loading GitHub image:', error);
-                loadFallbackImage();
+                try {
+                    const img = new Image();
+                    
+                    // Create a promise to handle the image loading
+                    const imageLoaded = new Promise((resolve, reject) => {
+                        img.onload = () => {
+                            console.log(`✅ SUCCESS: Image loaded from ${currentPath}`);
+                            profileImg.style.backgroundImage = `url('${currentPath}')`;
+                            profileImg.style.backgroundSize = 'cover';
+                            profileImg.style.backgroundPosition = 'center';
+                            profileImg.style.backgroundRepeat = 'no-repeat';
+                            resolve(true);
+                        };
+                        
+                        img.onerror = () => {
+                            console.log(`❌ FAILED: Could not load image from ${currentPath}`);
+                            reject(false);
+                        };
+                        
+                        // Set a timeout
+                        setTimeout(() => {
+                            console.log(`⏰ TIMEOUT: Image loading timed out for ${currentPath}`);
+                            reject(false);
+                        }, 5000);
+                    });
+                    
+                    img.src = currentPath;
+                    await imageLoaded;
+                    return; // Exit if successful
+                    
+                } catch (error) {
+                    console.log(`Error with path ${currentPath}:`, error);
+                    continue; // Try next path
+                }
             }
             
+            // If all paths fail, use fallback
+            console.log('All image paths failed, using fallback avatar');
+            loadFallbackImage();
+            
             function loadFallbackImage() {
-                // Professional fallback with your initials
                 const svgAvatar = `data:image/svg+xml;base64,${btoa(`
                     <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -1198,6 +1226,9 @@
                     </svg>
                 `)}`;
                 profileImg.style.backgroundImage = `url('${svgAvatar}')`;
+                profileImg.style.backgroundSize = 'cover';
+                profileImg.style.backgroundPosition = 'center';
+                console.log('✅ Fallback avatar loaded');
             }
         }
 
