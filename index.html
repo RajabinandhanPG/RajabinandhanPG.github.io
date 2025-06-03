@@ -17,6 +17,7 @@
             color: #333;
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             position: relative;
+            min-height: 100vh;
         }
 
         .container {
@@ -150,11 +151,31 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #1e3c72, #ff6b6b);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
         .nav-links a:hover {
             color: #1e3c72;
+            background: rgba(30, 60, 114, 0.05);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
         }
 
         /* Sections */
@@ -263,10 +284,16 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             transform-style: preserve-3d;
             transition: transform 0.3s ease;
+            color: #333;
         }
 
         .about-text:hover {
             transform: translateY(-5px);
+        }
+
+        .about-text h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
         }
 
         /* Skills */
@@ -277,12 +304,12 @@
         }
 
         .skill-category {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(20, 20, 40, 0.8);
             backdrop-filter: blur(20px);
             padding: 2rem;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 80px rgba(255, 20, 147, 0.2);
+            border: 1px solid rgba(0, 255, 255, 0.3);
             transform-style: preserve-3d;
             transition: all 0.3s ease;
             position: relative;
@@ -296,12 +323,13 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
             transition: left 0.5s ease;
         }
 
         .skill-category:hover {
             transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 0 60px rgba(0, 255, 255, 0.5), 0 0 120px rgba(255, 20, 147, 0.3);
         }
 
         .skill-category:hover::before {
@@ -309,9 +337,10 @@
         }
 
         .skill-category h3 {
-            color: #1e3c72;
+            color: #00ffff;
             margin-bottom: 1rem;
             font-size: 1.3rem;
+            text-shadow: 0 0 10px #00ffff;
         }
 
         .skill-tags {
@@ -321,22 +350,24 @@
         }
 
         .skill-tag {
-            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-            color: #1e3c72;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 20, 147, 0.2));
+            color: #00ff00;
             padding: 0.5rem 1rem;
             border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            border: 1px solid rgba(30, 60, 114, 0.1);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            text-shadow: 0 0 5px #00ff00;
         }
 
         .skill-tag:hover {
             transform: translateY(-3px) scale(1.05);
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            box-shadow: 0 10px 25px rgba(30, 60, 114, 0.3);
+            background: linear-gradient(135deg, #00ffff, #ff1493);
+            color: #000;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 20, 147, 0.6);
+            text-shadow: none;
         }
 
         /* Experience */
@@ -561,6 +592,7 @@
         .social-links a:hover {
             background: white;
             color: #1e3c72;
+            transform: translateY(-3px);
         }
 
         /* Cybersecurity 3D Elements */
@@ -683,8 +715,8 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, rgba(30, 60, 114, 0.1), rgba(255, 107, 107, 0.1));
-            border: 1px solid rgba(0, 255, 0, 0.2);
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 20, 147, 0.2));
+            border: 1px solid rgba(0, 255, 0, 0.4);
             border-radius: 10px;
             animation: float 6s ease-in-out infinite;
             backdrop-filter: blur(10px);
@@ -692,13 +724,14 @@
             align-items: center;
             justify-content: center;
             font-size: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), 0 0 60px rgba(255, 20, 147, 0.2);
         }
 
-        .floating-cube:nth-child(1)::before { content: '💻'; }
-        .floating-cube:nth-child(2)::before { content: '🔒'; }
-        .floating-cube:nth-child(3)::before { content: '🌐'; }
-        .floating-cube:nth-child(4)::before { content: '⚡'; }
-        .floating-cube:nth-child(5)::before { content: '🔍'; }
+        .floating-cube:nth-child(1)::before { content: '💻'; filter: drop-shadow(0 0 10px #00ffff); }
+        .floating-cube:nth-child(2)::before { content: '🔒'; filter: drop-shadow(0 0 10px #ff1493); }
+        .floating-cube:nth-child(3)::before { content: '🌐'; filter: drop-shadow(0 0 10px #00ff00); }
+        .floating-cube:nth-child(4)::before { content: '⚡'; filter: drop-shadow(0 0 10px #ffff00); }
+        .floating-cube:nth-child(5)::before { content: '🔍'; filter: drop-shadow(0 0 10px #ff6600); }
 
         .floating-cube:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
         .floating-cube:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
@@ -1120,23 +1153,38 @@
     </footer>
 
     <script>
-        // Load user's profile image
+        // Load user's profile image from GitHub
         async function loadProfileImage() {
             const profileImg = document.querySelector('.profile-img');
             
-            // TODO: Replace this URL with your actual hosted image
-            // For now, using a professional placeholder
-            // You can upload your image to any hosting service (GitHub, Imgur, Cloudinary, etc.)
-            // and replace this URL with your image URL
+            // GitHub image URL - replace this with your actual GitHub repository and image path
+            // Format: https://username.github.io/repository-name/images/image-filename.extension
+            const githubImageUrl = './images/profile.jpg'; // This assumes your image is named profile.jpg
             
-            const yourImageUrl = '/api/placeholder/200/200'; // Replace with your actual image URL
+            // Alternative formats you might use:
+            // const githubImageUrl = './images/profile.png'; 
+            // const githubImageUrl = 'https://RajabinandhanPG.github.io/images/profile.jpg';
             
             try {
-                profileImg.style.backgroundImage = `url('${yourImageUrl}')`;
-                console.log('Profile image loaded successfully');
+                // Test if the image exists
+                const img = new Image();
+                img.onload = function() {
+                    profileImg.style.backgroundImage = `url('${githubImageUrl}')`;
+                    console.log('Profile image loaded successfully from GitHub');
+                };
+                img.onerror = function() {
+                    console.log('GitHub image not found, using fallback');
+                    loadFallbackImage();
+                };
+                img.src = githubImageUrl;
+                
             } catch (error) {
-                console.log('Using placeholder image');
-                // Fallback SVG avatar
+                console.log('Error loading GitHub image:', error);
+                loadFallbackImage();
+            }
+            
+            function loadFallbackImage() {
+                // Professional fallback with your initials
                 const svgAvatar = `data:image/svg+xml;base64,${btoa(`
                     <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
