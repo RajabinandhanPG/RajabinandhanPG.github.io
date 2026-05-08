@@ -104,27 +104,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ===== REVEAL ON SCROLL =====
-const revealElements = document.querySelectorAll(
-  '.skill-category, .timeline-item, .ai-card, .problem-card, .render-stat, .about-text, .about-image, .contact-detail, .contact-form'
-);
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-
-revealElements.forEach((el) => {
-  el.classList.add('reveal');
-  revealObserver.observe(el);
-});
 
 // ===== CONTACT FORM =====
 function handleSubmit(e) {

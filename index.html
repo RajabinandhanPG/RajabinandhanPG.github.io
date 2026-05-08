@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAJ - Solutions Architect Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -34,28 +38,33 @@
   <section class="hero" id="home">
     <div class="container hero-container">
       <div class="hero-content">
-        <span class="hero-greeting">Hello, I'm</span>
-        <h1>RAJ<span>.</span></h1>
-        <h2 class="hero-title">Solutions Architect</h2>
-        <p>Architecting and operating dual-site enterprise infrastructure across India and the USA - spanning virtualization, cloud security, AI/ML platforms, and client-hosted environments with 900+ Mbps aggregate bandwidth.</p>
-        <div class="hero-buttons">
+        <span class="hero-greeting" data-aos="fade-down" data-aos-delay="100">Hello, I'm</span>
+        <h1 data-aos="fade-up" data-aos-delay="200">RAJ<span>.</span></h1>
+        <h2 class="hero-title" data-aos="fade-up" data-aos-delay="300">Solutions Architect</h2>
+        <p data-aos="fade-up" data-aos-delay="400">Architecting and operating dual-site enterprise infrastructure across
+          India and the USA - spanning virtualization, cloud security, AI/ML platforms, and client-hosted environments
+          with 900+ Mbps aggregate bandwidth.</p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
           <a href="#experience" class="btn btn-primary">VIEW MY WORK <i class="fas fa-arrow-right"></i></a>
           <a href="#contact" class="btn btn-secondary">GET IN TOUCH</a>
         </div>
-        <div class="hero-social">
-          <a href="https://www.linkedin.com/in/raj-abinandhanpg/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/RajabinandhanPG" class="social-link"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+        <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
+          <a href="https://www.linkedin.com/in/raj-abinandhanpg/" class="social-link" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/RajabinandhanPG" class="social-link" target="_blank"><i
+              class="fab fa-github"></i></a>
+          <a href="https://rajabinandhanpg.github.io/" class="social-link" target="_blank"><i
+              class="fas fa-globe"></i></a>
         </div>
       </div>
-      <div class="hero-image">
+      <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
         <div class="image-wrapper">
           <img src="IMG_8828.png" alt="RAJ - Solutions Architect">
         </div>
       </div>
     </div>
 
-    <a href="mailto:raj@example.com" class="email-btn">
+    <a href="mailto:rajabinandhanpg@gmail.com" class="email-btn">
       <i class="fas fa-envelope"></i>
       <span>mail me</span>
     </a>
@@ -71,19 +80,19 @@
   <!-- Stats Bar -->
   <section class="stats-bar" id="about">
     <div class="stats-container">
-      <div class="stat-item">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
         <h3 class="counter" data-target="5">0</h3>
         <p>Years Experience</p>
       </div>
-      <div class="stat-item">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
         <h3 class="counter" data-target="31">0</h3>
         <p>Virtual Machines</p>
       </div>
-      <div class="stat-item">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
         <h3 class="counter" data-target="10">0</h3>
         <p>VLAN Networks</p>
       </div>
-      <div class="stat-item">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
         <h3 class="counter" data-target="14">0</h3>
         <p>Public Services</p>
       </div>
@@ -93,29 +102,38 @@
   <!-- About Section -->
   <section class="about-section" id="about-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <span class="label">About Me</span>
         <h2>Solutions Architect & Infrastructure Engineer</h2>
       </div>
-      <div class="about-text-full">
-        <p>I architect and operate a dual-site infrastructure spanning <strong>Pollachi, Tamil Nadu (India)</strong> and <strong>Rockford, Illinois (USA)</strong> that supports internal business operations, client-hosted workloads, and a GPU-accelerated AI/ML platform.</p>
-        <p>The estate runs on <strong>three Proxmox hosts</strong> (Dell PowerEdge R740xd and R630), a <strong>Unraid NAS</strong>, and <strong>10 segmented VLANs</strong> connected via WireGuard and UniFi Site Magic tunnels. The platform delivers <strong>31 virtual machines</strong>, <strong>4 LXC containers</strong>, <strong>9 Docker application stacks</strong>, and <strong>14 publicly exposed internal services</strong> — all managed through Docker/Portainer automation, Nginx Proxy Manager, and Cloudflare Tunnels.</p>
-        <p>Beyond day-to-day operations, I designed and deployed a local AI inference platform powered by an <strong>RTX 5090 (32GB VRAM)</strong> running ComfyUI with FLUX.2, Hunyuan3D 2.1, and TRELLIS2 models (~87GB model suite). I also built a distributed Blender rendering farm using Flamenco 3.9.</p>
+      <div class="about-text-full" data-aos="fade-up" data-aos-delay="200">
+        <p>I architect and operate a dual-site infrastructure spanning <strong>Pollachi, Tamil Nadu (India)</strong> and
+          <strong>Rockford, Illinois (USA)</strong> that supports internal business operations, client-hosted workloads,
+          and a GPU-accelerated AI/ML platform.
+        </p>
+        <p>The estate runs on <strong>three Proxmox hosts</strong> (Dell PowerEdge R740xd and R630), a <strong>Unraid
+            NAS</strong>, and <strong>10 segmented VLANs</strong> connected via WireGuard and UniFi Site Magic tunnels.
+          The platform delivers <strong>31 virtual machines</strong>, <strong>4 LXC containers</strong>, <strong>9
+            Docker application stacks</strong>, and <strong>14 publicly exposed internal services</strong> — all managed
+          through Docker/Portainer automation, Nginx Proxy Manager, and Cloudflare Tunnels.</p>
+        <p>Beyond day-to-day operations, I designed and deployed a local AI inference platform powered by an <strong>RTX
+            5090 (32GB VRAM)</strong> running ComfyUI with FLUX.2, Hunyuan3D 2.1, and TRELLIS2 models (~87GB model
+          suite). I also built a distributed Blender rendering farm using Flamenco 3.9.</p>
 
         <div class="about-details">
-          <div class="detail-item">
+          <div class="detail-item" data-aos="fade-up" data-aos-delay="200">
             <span class="detail-label">Name</span>
             <span class="detail-value">RAJ</span>
           </div>
-          <div class="detail-item">
+          <div class="detail-item" data-aos="fade-up" data-aos-delay="250">
             <span class="detail-label">Role</span>
             <span class="detail-value">Solutions Architect</span>
           </div>
-          <div class="detail-item">
+          <div class="detail-item" data-aos="fade-up" data-aos-delay="300">
             <span class="detail-label">Locations</span>
             <span class="detail-value">India + USA</span>
           </div>
-          <div class="detail-item">
+          <div class="detail-item" data-aos="fade-up" data-aos-delay="350">
             <span class="detail-label">Infrastructure</span>
             <span class="detail-value">3 Proxmox Hosts</span>
           </div>
@@ -127,13 +145,13 @@
   <!-- Skills Section -->
   <section class="skills-section" id="skills">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <span class="label">Expertise</span>
         <h2>Technical Skills</h2>
         <p>Deep expertise across infrastructure, networking, security, AI/ML, and operations.</p>
       </div>
       <div class="skills-grid">
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-server"></i></div>
             <h3>Infrastructure & Virtualization</h3>
@@ -149,7 +167,7 @@
             <span class="skill-tag">PBS</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
             <h3>Networking</h3>
@@ -165,7 +183,7 @@
             <span class="skill-tag">Site Magic</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
             <h3>Security</h3>
@@ -181,7 +199,7 @@
             <span class="skill-tag">Tailscale</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-brain"></i></div>
             <h3>AI / Machine Learning</h3>
@@ -197,7 +215,7 @@
             <span class="skill-tag">FP8 Quantization</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
             <h3>Monitoring & Operations</h3>
@@ -211,7 +229,7 @@
             <span class="skill-tag">Jenkins CI/CD</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-database"></i></div>
             <h3>Applications</h3>
@@ -233,20 +251,23 @@
   <!-- Experience Section -->
   <section class="experience-section" id="experience">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <span class="label">Experience</span>
         <h2>Implemented Solutions</h2>
         <p>Real-world infrastructure projects delivering measurable business impact.</p>
       </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
           <div class="timeline-marker">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
             <span class="timeline-tag">Core Infrastructure</span>
             <h3>Dual-Site Infrastructure Architecture</h3>
-            <p>Deployed Dell PowerEdge R740xd (India, 128GB RAM / 96 vCPU) and Dell PowerEdge R630 (USA) as primary Proxmox hosts. Connected the two sites with UniFi Site Magic tunnels and WireGuard, creating a cross-country overlay network. Single hypervisor standard reduces operational complexity with iDRAC out-of-band management.</p>
+            <p>Deployed Dell PowerEdge R740xd (India, 128GB RAM / 96 vCPU) and Dell PowerEdge R630 (USA) as primary
+              Proxmox hosts. Connected the two sites with UniFi Site Magic tunnels and WireGuard, creating a
+              cross-country overlay network. Single hypervisor standard reduces operational complexity with iDRAC
+              out-of-band management.</p>
             <div class="timeline-tech">
               <span>Proxmox VE</span>
               <span>WireGuard</span>
@@ -255,14 +276,16 @@
             </div>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
           <div class="timeline-marker">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
             <span class="timeline-tag">Network</span>
             <h3>Enterprise VLAN Segmentation</h3>
-            <p>Designed and deployed 10 VLANs across both sites (5 per site), each on a dedicated /24 subnet. Client traffic fully isolated on VLAN 100. Dual WAN (ACT Fibernet 300/300 + MEGNET 300/300) with automatic failover ensures continuous uptime.</p>
+            <p>Designed and deployed 10 VLANs across both sites (5 per site), each on a dedicated /24 subnet. Client
+              traffic fully isolated on VLAN 100. Dual WAN (ACT Fibernet 300/300 + MEGNET 300/300) with automatic
+              failover ensures continuous uptime.</p>
             <div class="timeline-tech">
               <span>UniFi UDM SE/Pro</span>
               <span>USW 16 PoE</span>
@@ -271,14 +294,15 @@
             </div>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
           <div class="timeline-marker">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
             <span class="timeline-tag">Platform</span>
             <h3>Container Platform & Internal Toolchain</h3>
-            <p>Deployed Docker with Portainer on dedicated Proxmox VM. Organized services into 9 Portainer stacks. Team productivity tools all self-hosted — eliminates SaaS licensing costs and keeps data on-premises.</p>
+            <p>Deployed Docker with Portainer on dedicated Proxmox VM. Organized services into 9 Portainer stacks. Team
+              productivity tools all self-hosted — eliminates SaaS licensing costs and keeps data on-premises.</p>
             <div class="timeline-tech">
               <span>Docker</span>
               <span>Portainer</span>
@@ -287,14 +311,16 @@
             </div>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
           <div class="timeline-marker">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
             <span class="timeline-tag">Security</span>
             <h3>Public Application Exposure via Reverse Proxy</h3>
-            <p>Published 14 internal services securely through Nginx Proxy Manager and Cloudflare Tunnel. No port forwarding on WAN gateways. Origin server IPs hidden behind Cloudflare's edge with automatic certificate management.</p>
+            <p>Published 14 internal services securely through Nginx Proxy Manager and Cloudflare Tunnel. No port
+              forwarding on WAN gateways. Origin server IPs hidden behind Cloudflare's edge with automatic certificate
+              management.</p>
             <div class="timeline-tech">
               <span>Nginx Proxy Manager</span>
               <span>Cloudflare Tunnel</span>
@@ -303,14 +329,16 @@
             </div>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
           <div class="timeline-marker">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
             <span class="timeline-tag">Client Hosting</span>
             <h3>Multi-Tier Client Environment (Fonespot)</h3>
-            <p>Deployed 21 VMs on USA Proxmox host organized into 4 environment tiers (dev, QA, staging, prod) plus dedicated database and CI/CD servers. Hostnames follow env.service.fonespot.com convention. Full software delivery lifecycle on startup-operated equipment.</p>
+            <p>Deployed 21 VMs on USA Proxmox host organized into 4 environment tiers (dev, QA, staging, prod) plus
+              dedicated database and CI/CD servers. Hostnames follow env.service.fonespot.com convention. Full software
+              delivery lifecycle on startup-operated equipment.</p>
             <div class="timeline-tech">
               <span>Proxmox</span>
               <span>Jenkins</span>
@@ -319,14 +347,15 @@
             </div>
           </div>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
           <div class="timeline-marker">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
             <span class="timeline-tag">Security & Operations</span>
             <h3>Backup, DR & Security Hardening</h3>
-            <p>Deployed Proxmox Backup Server on Unraid NAS with daily deduplicated backups. Layered defense with Vaultwarden, Cloudflare Zero Trust, UniFi IDS/IPS, honeypots, and MFA across 8+ critical platforms.</p>
+            <p>Deployed Proxmox Backup Server on Unraid NAS with daily deduplicated backups. Layered defense with
+              Vaultwarden, Cloudflare Zero Trust, UniFi IDS/IPS, honeypots, and MFA across 8+ critical platforms.</p>
             <div class="timeline-tech">
               <span>PBS</span>
               <span>Vaultwarden</span>
@@ -342,13 +371,13 @@
   <!-- AI Platform Section -->
   <section class="ai-section" id="ai">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <span class="label">AI/ML</span>
         <h2>GPU-Powered AI Platform</h2>
         <p>On-premises AI inference and generation platform — local equivalent of $10K+ cloud GPU instances.</p>
       </div>
       <div class="ai-grid">
-        <div class="ai-card">
+        <div class="ai-card" data-aos="zoom-in" data-aos-delay="100">
           <div class="ai-card-icon"><i class="fas fa-microchip"></i></div>
           <h3>GPU Hardware</h3>
           <div class="ai-specs">
@@ -370,7 +399,7 @@
             </div>
           </div>
         </div>
-        <div class="ai-card">
+        <div class="ai-card" data-aos="zoom-in" data-aos-delay="200">
           <div class="ai-card-icon"><i class="fas fa-cube"></i></div>
           <h3>AI Models Deployed</h3>
           <div class="ai-specs">
@@ -392,7 +421,7 @@
             </div>
           </div>
         </div>
-        <div class="ai-card">
+        <div class="ai-card" data-aos="zoom-in" data-aos-delay="300">
           <div class="ai-card-icon"><i class="fas fa-palette"></i></div>
           <h3>Capabilities</h3>
           <div class="ai-capabilities">
@@ -445,37 +474,43 @@
           <div class="problem-number">01</div>
           <h3>Secure Service Publishing</h3>
           <p>How to publish 14 internal services securely without port forwarding?</p>
-          <p class="solution"><strong>Solution:</strong> Nginx Proxy Manager + Cloudflare Tunnel. Clean subdomains, origin IPs hidden, automatic TLS, WAF at edge.</p>
+          <p class="solution"><strong>Solution:</strong> Nginx Proxy Manager + Cloudflare Tunnel. Clean subdomains,
+            origin IPs hidden, automatic TLS, WAF at edge.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">02</div>
           <h3>Multi-Tier Environment</h3>
           <p>How to run 4 complete environments for a client on one physical host?</p>
-          <p class="solution"><strong>Solution:</strong> 21 VMs across dev/qa/staging/prod with dedicated DB and CI/CD. Network isolation via VLAN 100.</p>
+          <p class="solution"><strong>Solution:</strong> 21 VMs across dev/qa/staging/prod with dedicated DB and CI/CD.
+            Network isolation via VLAN 100.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">03</div>
           <h3>Cross-Country Connectivity</h3>
           <p>How to enable seamless connectivity for a remote team across two countries?</p>
-          <p class="solution"><strong>Solution:</strong> WireGuard for remote access + UniFi Site Magic for site-to-site tunneling. Automatic overlay networking.</p>
+          <p class="solution"><strong>Solution:</strong> WireGuard for remote access + UniFi Site Magic for site-to-site
+            tunneling. Automatic overlay networking.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">04</div>
           <h3>Budget AI Platform</h3>
           <p>How to run state-of-the-art AI models on a consumer GPU on a budget?</p>
-          <p class="solution"><strong>Solution:</strong> RTX 5090 with FP8 quantization enabling 34GB models. On-premises equivalent of $10K+ cloud GPU instances.</p>
+          <p class="solution"><strong>Solution:</strong> RTX 5090 with FP8 quantization enabling 34GB models.
+            On-premises equivalent of $10K+ cloud GPU instances.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">05</div>
           <h3>Multi-App Management</h3>
           <p>How to manage 12+ apps with a two-person team?</p>
-          <p class="solution"><strong>Solution:</strong> Docker + Portainer centralization. 9 stacks managed from one UI. Automated deployments via templates.</p>
+          <p class="solution"><strong>Solution:</strong> Docker + Portainer centralization. 9 stacks managed from one
+            UI. Automated deployments via templates.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">06</div>
           <h3>Distributed Rendering</h3>
           <p>How to provide distributed rendering without cloud costs?</p>
-          <p class="solution"><strong>Solution:</strong> Flamenco 3.9 render farm with GPU worker LXC. Shared CIFS storage on Unraid NAS.</p>
+          <p class="solution"><strong>Solution:</strong> Flamenco 3.9 render farm with GPU worker LXC. Shared CIFS
+            storage on Unraid NAS.</p>
         </div>
       </div>
     </div>
@@ -511,7 +546,7 @@
             <div class="contact-detail-icon"><i class="fas fa-globe"></i></div>
             <div class="contact-detail-text">
               <h4>Website</h4>
-              <p>https://rajabinandhanpg.github.io/</p>
+              <p><a href="https://linktr.ee/RajabinandhanPG" target="_blank">RajabinandhanPG</a></p>
             </div>
           </div>
         </div>
@@ -535,9 +570,12 @@
         <a href="#home" class="logo">RAJ<span>.</span></a>
         <p>&copy; 2026 RAJ — Solutions Architect. All Rights Reserved.</p>
         <div class="footer-social">
-          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+          <a href="https://www.linkedin.com/in/raj-abinandhanpg/" class="social-link" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/RajabinandhanPG" class="social-link" target="_blank"><i
+              class="fab fa-github"></i></a>
+          <a href="https://rajabinandhanpg.github.io/" class="social-link" target="_blank"><i
+              class="fas fa-globe"></i></a>
         </div>
       </div>
     </div>
@@ -546,6 +584,16 @@
   <!-- Scroll to Top -->
   <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
+  </script>
 </body>
+
 </html>
