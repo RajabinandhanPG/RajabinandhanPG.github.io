@@ -1,1305 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajabinandhan PG - Cybersecurity Professional</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            position: relative;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 2rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 3rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-
-        .hero .tagline {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.8;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
-            transform-style: preserve-3d;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px) rotateX(5deg);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid white;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, white, #f0f0f0);
-            color: #1e3c72;
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            position: relative;
-        }
-
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #1e3c72, #ff6b6b);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-links a:hover {
-            color: #1e3c72;
-            background: rgba(30, 60, 114, 0.05);
-        }
-
-        .nav-links a:hover::before {
-            width: 100%;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1e3c72;
-        }
-
-        /* About */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .profile-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transform-style: preserve-3d;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-10px) rotateX(5deg);
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            border: 4px solid #fff;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.3s ease;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 2;
-        }
-
-        .profile-img:hover {
-            transform: rotateY(5deg) rotateX(5deg) translateZ(10px);
-        }
-
-        .profile-img::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #1e3c72, #2a5298, #ff6b6b, #1e3c72);
-            border-radius: 50%;
-            z-index: -1;
-            animation: rotate 4s linear infinite;
-            opacity: 0.6;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .profile-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #1e3c72;
-        }
-
-        .profile-info p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-info a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-
-        .about-text {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transform-style: preserve-3d;
-            transition: transform 0.3s ease;
-            color: #333;
-        }
-
-        .about-text:hover {
-            transform: translateY(-5px);
-        }
-
-        .about-text h3 {
-            color: #1e3c72;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: rgba(20, 20, 40, 0.8);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 80px rgba(255, 20, 147, 0.2);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-category::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 0 60px rgba(0, 255, 255, 0.5), 0 0 120px rgba(255, 20, 147, 0.3);
-        }
-
-        .skill-category:hover::before {
-            left: 100%;
-        }
-
-        .skill-category h3 {
-            color: #00ffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            text-shadow: 0 0 10px #00ffff;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 20, 147, 0.2));
-            color: #00ff00;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 255, 0, 0.3);
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-            text-shadow: 0 0 5px #00ff00;
-        }
-
-        .skill-tag:hover {
-            transform: translateY(-3px) scale(1.05);
-            background: linear-gradient(135deg, #00ffff, #ff1493);
-            color: #000;
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 20, 147, 0.6);
-            text-shadow: none;
-        }
-
-        /* Experience */
-        .experience-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover {
-            transform: translateX(10px) rotateY(5deg);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -15px;
-            top: 30px;
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(135deg, #1e3c72, #ff6b6b);
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(30, 60, 114, 0.3);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .job-title {
-            color: #1e3c72;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .job-company {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .job-date {
-            color: #999;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .job-description ul {
-            list-style-position: inside;
-            color: #666;
-        }
-
-        .job-description li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #1e3c72, #ff6b6b, #2a5298);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.15), 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .project-card h3 {
-            color: #1e3c72;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .project-card p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .project-link {
-            color: #ff6b6b;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Education & Certifications */
-        .edu-cert-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .edu-cert-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
-        }
-
-        .edu-cert-card:hover {
-            transform: translateY(-10px) rotateX(5deg);
-        }
-
-        .edu-cert-card h3 {
-            color: #1e3c72;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .edu-item, .cert-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .edu-item:last-child, .cert-item:last-child {
-            border-bottom: none;
-        }
-
-        .edu-degree, .cert-name {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .edu-school, .cert-issuer {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid white;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: white;
-            color: #1e3c72;
-            transform: translateY(-3px);
-        }
-
-        /* Cybersecurity 3D Elements */
-        .cyber-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .binary-rain {
-            position: absolute;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            color: rgba(0, 255, 0, 0.3);
-            animation: matrix 10s linear infinite;
-            white-space: nowrap;
-        }
-
-        @keyframes matrix {
-            0% { transform: translateY(-100vh); opacity: 1; }
-            100% { transform: translateY(100vh); opacity: 0; }
-        }
-
-        .floating-shield {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, rgba(30, 60, 114, 0.2), rgba(255, 107, 107, 0.2));
-            border: 2px solid rgba(0, 255, 0, 0.3);
-            border-radius: 15px;
-            animation: float-rotate 8s ease-in-out infinite;
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
-
-        .floating-shield::before {
-            content: '🛡️';
-            filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
-        }
-
-        @keyframes float-rotate {
-            0%, 100% { transform: translateY(0px) rotateZ(0deg) rotateX(0deg); }
-            33% { transform: translateY(-30px) rotateZ(120deg) rotateX(10deg); }
-            66% { transform: translateY(-15px) rotateZ(240deg) rotateX(-10deg); }
-        }
-
-        .network-node {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: #00ff00;
-            border-radius: 50%;
-            box-shadow: 0 0 20px #00ff00;
-            animation: pulse-node 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse-node {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.5); opacity: 1; }
-        }
-
-        .code-fragment {
-            position: absolute;
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            color: rgba(255, 107, 107, 0.4);
-            background: rgba(0, 0, 0, 0.1);
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: 1px solid rgba(255, 107, 107, 0.2);
-            animation: drift 15s linear infinite;
-            backdrop-filter: blur(5px);
-        }
-
-        @keyframes drift {
-            0% { transform: translateX(-100px) translateY(0px) rotateZ(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateX(calc(100vw + 100px)) translateY(-50px) rotateZ(360deg); opacity: 0; }
-        }
-
-        .hex-pattern {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: 2px solid rgba(30, 60, 114, 0.2);
-            animation: hex-float 12s ease-in-out infinite;
-            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-        }
-
-        @keyframes hex-float {
-            0%, 100% { transform: translateY(0px) rotateZ(0deg); opacity: 0.3; }
-            50% { transform: translateY(-40px) rotateZ(180deg); opacity: 0.8; }
-        }
-
-        .terminal-cursor {
-            position: absolute;
-            width: 2px;
-            height: 20px;
-            background: #00ff00;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        /* Enhanced Floating Elements */
-        .floating-cube {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 20, 147, 0.2));
-            border: 1px solid rgba(0, 255, 0, 0.4);
-            border-radius: 10px;
-            animation: float 6s ease-in-out infinite;
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), 0 0 60px rgba(255, 20, 147, 0.2);
-        }
-
-        .floating-cube:nth-child(1)::before { content: '💻'; filter: drop-shadow(0 0 10px #00ffff); }
-        .floating-cube:nth-child(2)::before { content: '🔒'; filter: drop-shadow(0 0 10px #ff1493); }
-        .floating-cube:nth-child(3)::before { content: '🌐'; filter: drop-shadow(0 0 10px #00ff00); }
-        .floating-cube:nth-child(4)::before { content: '⚡'; filter: drop-shadow(0 0 10px #ffff00); }
-        .floating-cube:nth-child(5)::before { content: '🔍'; filter: drop-shadow(0 0 10px #ff6600); }
-
-        .floating-cube:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-        .floating-cube:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
-        .floating-cube:nth-child(3) { top: 60%; left: 5%; animation-delay: 4s; }
-        .floating-cube:nth-child(4) { bottom: 20%; right: 15%; animation-delay: 1s; }
-        .floating-cube:nth-child(5) { top: 80%; left: 20%; animation-delay: 3s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotateZ(0deg); }
-            50% { transform: translateY(-20px) rotateZ(10deg); }
-        }
-
-        /* 3D Section Headers */
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1e3c72;
-            text-shadow: 0 5px 15px rgba(30, 60, 114, 0.2);
-            transform-style: preserve-3d;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #1e3c72, #ff6b6b);
-            border-radius: 2px;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
-        }
-
-        .section-title:hover {
-            transform: rotateX(5deg) translateY(-5px);
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .edu-cert-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .job-header {
-                flex-direction: column;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        .section-alt {
-            background: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAJ - Solutions Architect Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-            <!-- Cybersecurity 3D Elements -->
-    <div class="cyber-elements">
-        <!-- Binary Rain -->
-        <div class="binary-rain" style="left: 5%; animation-delay: 0s;">01001000 01100001 01100011 01101011</div>
-        <div class="binary-rain" style="left: 15%; animation-delay: 2s;">01010011 01100101 01100011 01110101</div>
-        <div class="binary-rain" style="left: 25%; animation-delay: 4s;">01000011 01111001 01100010 01100101</div>
-        <div class="binary-rain" style="left: 35%; animation-delay: 1s;">01000110 01101001 01110010 01100101</div>
-        <div class="binary-rain" style="left: 45%; animation-delay: 3s;">01001110 01100101 01110100 01110111</div>
-        <div class="binary-rain" style="left: 55%; animation-delay: 5s;">01000100 01100001 01110100 01100001</div>
-        <div class="binary-rain" style="left: 65%; animation-delay: 2.5s;">01000011 01101111 01100100 01100101</div>
-        <div class="binary-rain" style="left: 75%; animation-delay: 4.5s;">01001000 01100001 01110011 01101000</div>
-        <div class="binary-rain" style="left: 85%; animation-delay: 1.5s;">01010010 01101111 01101111 01110100</div>
-        <div class="binary-rain" style="left: 95%; animation-delay: 3.5s;">01000001 01100100 01101101 01101001</div>
 
-        <!-- Floating Shields -->
-        <div class="floating-shield" style="top: 15%; left: 80%; animation-delay: 0s;"></div>
-        <div class="floating-shield" style="top: 70%; left: 90%; animation-delay: 3s;"></div>
-        <div class="floating-shield" style="top: 40%; left: 5%; animation-delay: 6s;"></div>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">RAJ<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#ai">AI Platform</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-        <!-- Network Nodes -->
-        <div class="network-node" style="top: 30%; left: 20%; animation-delay: 0s;"></div>
-        <div class="network-node" style="top: 50%; left: 70%; animation-delay: 1s;"></div>
-        <div class="network-node" style="top: 80%; left: 40%; animation-delay: 2s;"></div>
-        <div class="network-node" style="top: 10%; left: 60%; animation-delay: 1.5s;"></div>
-
-        <!-- Code Fragments -->
-        <div class="code-fragment" style="top: 25%; animation-delay: 0s;">function encrypt(data) {</div>
-        <div class="code-fragment" style="top: 45%; animation-delay: 5s;">SELECT * FROM users;</div>
-        <div class="code-fragment" style="top: 65%; animation-delay: 10s;">nmap -sS -O target</div>
-        <div class="code-fragment" style="top: 85%; animation-delay: 7s;">wireshark -i eth0</div>
-
-        <!-- Hex Patterns -->
-        <div class="hex-pattern" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
-        <div class="hex-pattern" style="top: 60%; left: 80%; animation-delay: 4s;"></div>
-        <div class="hex-pattern" style="top: 90%; left: 10%; animation-delay: 8s;"></div>
-
-        <!-- Terminal Cursors -->
-        <div class="terminal-cursor" style="top: 35%; left: 25%;"></div>
-        <div class="terminal-cursor" style="top: 75%; left: 85%;"></div>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1>RAJ<span>.</span></h1>
+        <h2 class="hero-title">Solutions Architect</h2>
+        <p>Architecting and operating dual-site enterprise infrastructure across India and the USA — spanning virtualization, cloud security, AI/ML platforms, and client-hosted environments with 900+ Mbps aggregate bandwidth.</p>
+        <div class="hero-buttons">
+          <a href="#experience" class="btn btn-primary">VIEW MY WORK <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-secondary">GET IN TOUCH</a>
+        </div>
+        <div class="hero-social">
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="IMG_8828.png" alt="RAJ - Solutions Architect">
+        </div>
+      </div>
     </div>
 
-    <!-- Enhanced Floating Tech Elements -->
-    <div class="floating-elements">
-        <div class="floating-cube"></div>
-        <div class="floating-cube"></div>
-        <div class="floating-cube"></div>
-        <div class="floating-cube"></div>
-        <div class="floating-cube"></div>
+    <a href="mailto:raj@example.com" class="email-btn">
+      <i class="fas fa-envelope"></i>
+      <span>mail me</span>
+    </a>
+
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll Down</span>
     </div>
+  </section>
 
-    <!-- Header -->
-    <header>
-        <div class="header-bg"></div>
-        <div class="container">
-            <div class="hero">
-                <h1>Rajabinandhan Periyagoundanoor Gopal</h1>
-                <p class="subtitle">Cybersecurity Professional & IT Specialist</p>
-                <p class="tagline">Freelancer skilled in IT support, custom solutions, and cybersecurity, specializing in network storage, threat mitigation, and incident response.</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View Projects</a>
-                </div>
+  <!-- Stats Bar -->
+  <section class="stats-bar" id="about">
+    <div class="stats-container">
+      <div class="stat-item">
+        <h3 class="counter" data-target="5">0</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="31">0</h3>
+        <p>Virtual Machines</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="10">0</h3>
+        <p>VLAN Networks</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="14">0</h3>
+        <p>Public Services</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">About Me</span>
+        <h2>Solutions Architect & Infrastructure Engineer</h2>
+      </div>
+      <div class="about-text-full">
+        <p>I architect and operate a dual-site infrastructure spanning <strong>Pollachi, Tamil Nadu (India)</strong> and <strong>Rockford, Illinois (USA)</strong> that supports internal business operations, client-hosted workloads, and a GPU-accelerated AI/ML platform.</p>
+        <p>The estate runs on <strong>three Proxmox hosts</strong> (Dell PowerEdge R740xd and R630), a <strong>Unraid NAS</strong>, and <strong>10 segmented VLANs</strong> connected via WireGuard and UniFi Site Magic tunnels. The platform delivers <strong>31 virtual machines</strong>, <strong>4 LXC containers</strong>, <strong>9 Docker application stacks</strong>, and <strong>14 publicly exposed internal services</strong> — all managed through Docker/Portainer automation, Nginx Proxy Manager, and Cloudflare Tunnels.</p>
+        <p>Beyond day-to-day operations, I designed and deployed a local AI inference platform powered by an <strong>RTX 5090 (32GB VRAM)</strong> running ComfyUI with FLUX.2, Hunyuan3D 2.1, and TRELLIS2 models (~87GB model suite). I also built a distributed Blender rendering farm using Flamenco 3.9.</p>
+
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">RAJ</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Role</span>
+            <span class="detail-value">Solutions Architect</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Locations</span>
+            <span class="detail-value">India + USA</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Infrastructure</span>
+            <span class="detail-value">3 Proxmox Hosts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Expertise</span>
+        <h2>Technical Skills</h2>
+        <p>Deep expertise across infrastructure, networking, security, AI/ML, and operations.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
+            <h3>Infrastructure & Virtualization</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Proxmox VE</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Portainer</span>
+            <span class="skill-tag">LXC Containers</span>
+            <span class="skill-tag">Ubuntu / Debian</span>
+            <span class="skill-tag">Unraid NAS</span>
+            <span class="skill-tag">GPU Passthrough</span>
+            <span class="skill-tag">PBS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Networking</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">VLAN Design</span>
+            <span class="skill-tag">WireGuard</span>
+            <span class="skill-tag">Cloudflare Tunnel</span>
+            <span class="skill-tag">UniFi Ecosystem</span>
+            <span class="skill-tag">Nginx Proxy Manager</span>
+            <span class="skill-tag">IPv4 Subnetting</span>
+            <span class="skill-tag">HTTPS/TLS</span>
+            <span class="skill-tag">Site Magic</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Security</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">IDS/IPS</span>
+            <span class="skill-tag">Honeypots</span>
+            <span class="skill-tag">Vaultwarden</span>
+            <span class="skill-tag">Cloudflare Zero Trust</span>
+            <span class="skill-tag">MFA Strategy</span>
+            <span class="skill-tag">Network Segmentation</span>
+            <span class="skill-tag">WAF</span>
+            <span class="skill-tag">Tailscale</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI / Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">ComfyUI</span>
+            <span class="skill-tag">PyTorch / CUDA</span>
+            <span class="skill-tag">FLUX.2</span>
+            <span class="skill-tag">Hunyuan3D 2.1</span>
+            <span class="skill-tag">TRELLIS2</span>
+            <span class="skill-tag">Blender</span>
+            <span class="skill-tag">Flamenco 3.9</span>
+            <span class="skill-tag">FP8 Quantization</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Monitoring & Operations</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Zabbix</span>
+            <span class="skill-tag">Healthchecks</span>
+            <span class="skill-tag">Cronicle</span>
+            <span class="skill-tag">Homarr</span>
+            <span class="skill-tag">Discord Alerts</span>
+            <span class="skill-tag">Jenkins CI/CD</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>Applications</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">ERPNext</span>
+            <span class="skill-tag">n8n</span>
+            <span class="skill-tag">Plane PM</span>
+            <span class="skill-tag">Docmost</span>
+            <span class="skill-tag">NocoDB</span>
+            <span class="skill-tag">Penpot</span>
+            <span class="skill-tag">Portainer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Experience</span>
+        <h2>Implemented Solutions</h2>
+        <p>Real-world infrastructure projects delivering measurable business impact.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Core Infrastructure</span>
+            <h3>Dual-Site Infrastructure Architecture</h3>
+            <p>Deployed Dell PowerEdge R740xd (India, 128GB RAM / 96 vCPU) and Dell PowerEdge R630 (USA) as primary Proxmox hosts. Connected the two sites with UniFi Site Magic tunnels and WireGuard, creating a cross-country overlay network. Single hypervisor standard reduces operational complexity with iDRAC out-of-band management.</p>
+            <div class="timeline-tech">
+              <span>Proxmox VE</span>
+              <span>WireGuard</span>
+              <span>UniFi Site Magic</span>
+              <span>Cloudflare</span>
             </div>
+          </div>
         </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Network</span>
+            <h3>Enterprise VLAN Segmentation</h3>
+            <p>Designed and deployed 10 VLANs across both sites (5 per site), each on a dedicated /24 subnet. Client traffic fully isolated on VLAN 100. Dual WAN (ACT Fibernet 300/300 + MEGNET 300/300) with automatic failover ensures continuous uptime.</p>
+            <div class="timeline-tech">
+              <span>UniFi UDM SE/Pro</span>
+              <span>USW 16 PoE</span>
+              <span>VLANs</span>
+              <span>DHCP</span>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="profile-card">
-                    <div class="profile-img"></div>
-                    <div class="profile-info">
-                        <h3>Rajabinandhan PG</h3>
-                        <p>Cyber Security Analyst</p>
-                        <div class="contact-info">
-                            <span>📍 Chicago, IL</span>
-                            <span>📧 <a href="mailto:rajabinandhanpg@gmail.com">rajabinandhanpg@gmail.com</a></span>
-                            <span>📱 +1(312) 866-1175</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h3>Professional Summary</h3>
-                    <p>Versatile Cybersecurity Professional and IT Specialist with expertise in penetration testing, digital forensics, and custom solution development. Skilled in security analysis, network architecture, and incident response with a proven track record of supporting multiple businesses simultaneously.</p>
-                    <p>Extensive experience in data recovery, mobile device repair, and complex system troubleshooting across diverse platforms. Dedicated to implementing robust security measures and delivering exceptional technical solutions.</p>
-                    <p>Currently supporting 12 companies in Crystal Lake, IL while pursuing advanced cybersecurity practices and maintaining a strong focus on proactive threat mitigation and business continuity solutions.</p>
-                </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Platform</span>
+            <h3>Container Platform & Internal Toolchain</h3>
+            <p>Deployed Docker with Portainer on dedicated Proxmox VM. Organized services into 9 Portainer stacks. Team productivity tools all self-hosted — eliminates SaaS licensing costs and keeps data on-premises.</p>
+            <div class="timeline-tech">
+              <span>Docker</span>
+              <span>Portainer</span>
+              <span>Nginx Proxy Manager</span>
+              <span>Ubuntu 22/24</span>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-alt">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">R</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Cybersecurity Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Nmap</span>
-                        <span class="skill-tag">Metasploit</span>
-                        <span class="skill-tag">Wireshark</span>
-                        <span class="skill-tag">Burpsuite</span>
-                        <span class="skill-tag">John the Ripper</span>
-                        <span class="skill-tag">Sqlmap</span>
-                        <span class="skill-tag">Kali Linux</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Systems & Infrastructure</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Windows</span>
-                        <span class="skill-tag">macOS</span>
-                        <span class="skill-tag">Networking</span>
-                        <span class="skill-tag">Cloud Computing</span>
-                        <span class="skill-tag">Virtualization</span>
-                        <span class="skill-tag">pfSense</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Specialty Areas</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Penetration Testing</span>
-                        <span class="skill-tag">Digital Forensics</span>
-                        <span class="skill-tag">OSINT</span>
-                        <span class="skill-tag">Vulnerability Assessment</span>
-                        <span class="skill-tag">Incident Response</span>
-                        <span class="skill-tag">Data Recovery</span>
-                    </div>
-                </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Security</span>
+            <h3>Public Application Exposure via Reverse Proxy</h3>
+            <p>Published 14 internal services securely through Nginx Proxy Manager and Cloudflare Tunnel. No port forwarding on WAN gateways. Origin server IPs hidden behind Cloudflare's edge with automatic certificate management.</p>
+            <div class="timeline-tech">
+              <span>Nginx Proxy Manager</span>
+              <span>Cloudflare Tunnel</span>
+              <span>Certificates</span>
+              <span>WAF</span>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Cyber Security Analyst</div>
-                            <div class="job-company">Aditas Solutions</div>
-                        </div>
-                        <div class="job-date">Apr 2024 - Present</div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Execute comprehensive network reconnaissance and penetration testing using tools like Nmap, SQLmap, and Metasploit</li>
-                            <li>Develop and implement OSINT techniques for threat intelligence gathering</li>
-                            <li>Conduct digital forensics investigations to identify breach pathways and recover compromised data</li>
-                            <li>Lead security awareness training sessions and implement password security protocols</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Hardware/Software Specialist</div>
-                            <div class="job-company">Freelancer</div>
-                        </div>
-                        <div class="job-date">Nov 2018 - Present</div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Currently supporting 12 companies including Onemain Fin, Lender Match, Games R us in Crystal Lake, IL</li>
-                            <li>Design and implement enterprise-grade NAS solutions with redundancy using OpenSNS on Raspberry Pi</li>
-                            <li>Perform specialized logical data recovery services for local businesses</li>
-                            <li>Architect sophisticated virtualized environments with Proxmox and self-hosted CRM systems</li>
-                            <li>Deploy advanced network security configurations including pfSense VLAN implementations</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Amazon Games Specialist</div>
-                            <div class="job-company">Amazon Games</div>
-                        </div>
-                        <div class="job-date">Dec 2021 - Jun 2022</div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Served as Subject Matter Expert on the launch team for "Lost Ark"</li>
-                            <li>Implemented security protocols for anti-cheat systems using network analysis tools</li>
-                            <li>Developed data-driven solutions achieving 97% positive feedback and 38% faster response time</li>
-                            <li>Created console applications to automate testing procedures and streamline debugging workflows</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Client Hosting</span>
+            <h3>Multi-Tier Client Environment (Fonespot)</h3>
+            <p>Deployed 21 VMs on USA Proxmox host organized into 4 environment tiers (dev, QA, staging, prod) plus dedicated database and CI/CD servers. Hostnames follow env.service.fonespot.com convention. Full software delivery lifecycle on startup-operated equipment.</p>
+            <div class="timeline-tech">
+              <span>Proxmox</span>
+              <span>Jenkins</span>
+              <span>Debian 12</span>
+              <span>VLAN Isolation</span>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section-alt">
-        <div class="container">
-            <h2 class="section-title">Key Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Acme Penetration Testing</h3>
-                    <p>Led a comprehensive penetration testing project to identify and assess vulnerabilities in network systems, utilizing tools like Kali Linux, Nmap, and John the Ripper. Successfully uncovered critical security weaknesses and proposed effective mitigation strategies.</p>
-                    <a href="https://github.com/RajabinandhanPG/Acme_Pentesting" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Digital Forensics Investigation</h3>
-                    <p>Conducted comprehensive digital forensic analysis of compromised systems, successfully recovering critical evidence using specialized forensic tools. Documented complete investigation methodology and findings in detailed technical reports.</p>
-                    <a href="https://github.com/RajabinandhanPG/Cyber_Forensics_Investigation" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>OSINT Dashboard</h3>
-                    <p>Developed a Python-based open-source intelligence gathering tool with Tkinter GUI that efficiently scrapes and analyzes user data from major social media platforms including Twitter, Facebook, and Instagram.</p>
-                    <a href="#" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Secure Enterprise NAS Implementation</h3>
-                    <p>Designed and deployed a comprehensive network storage solution using a Linkin NAS system with advanced security protocols, encryption, and access controls to safeguard sensitive customer data.</p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Advanced TTS Application</h3>
-                    <p>Engineered a full-stack web application that seamlessly integrates multiple text-to-speech APIs with AI text generation services. Features modular architecture with separate frontend/backend components.</p>
-                    <a href="#" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Multi-Function Home Server Infrastructure</h3>
-                    <p>Architected a sophisticated home server environment featuring network isolation through pfSense VLAN configuration, demonstrating advanced networking and system integration capabilities.</p>
-                    <a href="#" class="project-link">Learn More →</a>
-                </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-tag">Security & Operations</span>
+            <h3>Backup, DR & Security Hardening</h3>
+            <p>Deployed Proxmox Backup Server on Unraid NAS with daily deduplicated backups. Layered defense with Vaultwarden, Cloudflare Zero Trust, UniFi IDS/IPS, honeypots, and MFA across 8+ critical platforms.</p>
+            <div class="timeline-tech">
+              <span>PBS</span>
+              <span>Vaultwarden</span>
+              <span>Cloudflare Zero Trust</span>
+              <span>IDS/IPS</span>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education & Certifications -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
-            <div class="edu-cert-grid">
-                <div class="edu-cert-card">
-                    <h3>Education</h3>
-                    <div class="edu-item">
-                        <div class="edu-degree">Master of Cyber Forensics and Security</div>
-                        <div class="edu-school">Illinois Institute of Technology</div>
-                        <div class="edu-school">Expected Dec 2024</div>
-                    </div>
-                    <div class="edu-item">
-                        <div class="edu-degree">Bachelor of Computer Application</div>
-                        <div class="edu-school">Sri Krishna Arts and Science College</div>
-                        <div class="edu-school">2018 - 2021</div>
-                    </div>
-                </div>
-                <div class="edu-cert-card">
-                    <h3>Certifications</h3>
-                    <div class="cert-item">
-                        <div class="cert-name">CompTIA Security+ (SY0-601)</div>
-                        <div class="cert-issuer">Valid through December 2026</div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-name">CyberDefence Pro</div>
-                        <div class="cert-issuer">Global InfoSec Institute, 2024</div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-name">Jones & Bartlett Forensics Certificate</div>
-                        <div class="cert-issuer">2023</div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-name">Unreal Engine 5 Fundamentals</div>
-                        <div class="cert-issuer">Epic Games, 2022</div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-name">Programming Certifications</div>
-                        <div class="cert-issuer">R, Python, Java, C++</div>
-                    </div>
-                </div>
+  <!-- AI Platform Section -->
+  <section class="ai-section" id="ai">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">AI/ML</span>
+        <h2>GPU-Powered AI Platform</h2>
+        <p>On-premises AI inference and generation platform — local equivalent of $10K+ cloud GPU instances.</p>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card">
+          <div class="ai-card-icon"><i class="fas fa-microchip"></i></div>
+          <h3>GPU Hardware</h3>
+          <div class="ai-specs">
+            <div class="spec-row">
+              <span class="spec-label">GPU</span>
+              <span class="spec-value">NVIDIA RTX 5090</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-alt">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content" style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">
-                    Ready to discuss cybersecurity solutions or IT projects? I'm always open to new opportunities and collaborations.
-                </p>
-                <div class="footer-content">
-                    <div class="social-links">
-                        <a href="mailto:rajabinandhanpg@gmail.com">Email</a>
-                        <a href="https://github.com/RajabinandhanPG">GitHub</a>
-                        <a href="https://www.linkedin.com/in/raj-abinandhanpg/">LinkedIn</a>
-                        <a href="https://linktr.ee/RajabinandhanPG">Linktree</a>
-                    </div>
-                </div>
+            <div class="spec-row">
+              <span class="spec-label">VRAM</span>
+              <span class="spec-value">32GB GDDR7</span>
             </div>
+            <div class="spec-row">
+              <span class="spec-label">Compute</span>
+              <span class="spec-value">CUDA 12.8</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Framework</span>
+              <span class="spec-value">PyTorch 2.11</span>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Rajabinandhan Periyagoundanoor Gopal. All rights reserved.</p>
-            <p style="margin-top: 1rem; opacity: 0.8;">Cybersecurity Professional | IT Specialist | Chicago, IL</p>
+        <div class="ai-card">
+          <div class="ai-card-icon"><i class="fas fa-cube"></i></div>
+          <h3>AI Models Deployed</h3>
+          <div class="ai-specs">
+            <div class="spec-row">
+              <span class="spec-label">FLUX.2 Dev FP8</span>
+              <span class="spec-value">34GB</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Mistral-FLUX2 FP8</span>
+              <span class="spec-value">17GB</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">Hunyuan3D v2.1</span>
+              <span class="spec-value">6.9GB</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">TRELLIS2 Image</span>
+              <span class="spec-value">Large</span>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="ai-card">
+          <div class="ai-card-icon"><i class="fas fa-palette"></i></div>
+          <h3>Capabilities</h3>
+          <div class="ai-capabilities">
+            <span class="ai-cap">Image Generation</span>
+            <span class="ai-cap">3D Mesh Generation</span>
+            <span class="ai-cap">PBR Texturing</span>
+            <span class="ai-cap">Asset Generation</span>
+            <span class="ai-cap">Background Removal</span>
+            <span class="ai-cap">Custom Workflows</span>
+          </div>
+        </div>
+      </div>
 
-    <script>
-        // Enhanced image loading with better debugging
-        async function loadProfileImage() {
-            const profileImg = document.querySelector('.profile-img');
-            
-            // Multiple image path options to try
-            const imagePaths = [
-                './images/profile.jpg',
-                'https://RajabinandhanPG.github.io/images/profile.jpg',
-                'images/profile.jpg'
-            ];
-            
-            console.log('Starting image load process...');
-            
-            // Try each image path
-            for (let i = 0; i < imagePaths.length; i++) {
-                const currentPath = imagePaths[i];
-                console.log(`Trying image path ${i + 1}: ${currentPath}`);
-                
-                try {
-                    const img = new Image();
-                    
-                    // Create a promise to handle the image loading
-                    const imageLoaded = new Promise((resolve, reject) => {
-                        img.onload = () => {
-                            console.log(`✅ SUCCESS: Image loaded from ${currentPath}`);
-                            profileImg.style.backgroundImage = `url('${currentPath}')`;
-                            profileImg.style.backgroundSize = 'cover';
-                            profileImg.style.backgroundPosition = 'center';
-                            profileImg.style.backgroundRepeat = 'no-repeat';
-                            resolve(true);
-                        };
-                        
-                        img.onerror = () => {
-                            console.log(`❌ FAILED: Could not load image from ${currentPath}`);
-                            reject(false);
-                        };
-                        
-                        // Set a timeout
-                        setTimeout(() => {
-                            console.log(`⏰ TIMEOUT: Image loading timed out for ${currentPath}`);
-                            reject(false);
-                        }, 5000);
-                    });
-                    
-                    img.src = currentPath;
-                    await imageLoaded;
-                    return; // Exit if successful
-                    
-                } catch (error) {
-                    console.log(`Error with path ${currentPath}:`, error);
-                    continue; // Try next path
-                }
-            }
-            
-            // If all paths fail, use fallback
-            console.log('All image paths failed, using fallback avatar');
-            loadFallbackImage();
-            
-            function loadFallbackImage() {
-                const svgAvatar = `data:image/svg+xml;base64,${btoa(`
-                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="100" cy="100" r="95" fill="url(#grad)" />
-                        <text x="100" y="110" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">RPG</text>
-                    </svg>
-                `)}`;
-                profileImg.style.backgroundImage = `url('${svgAvatar}')`;
-                profileImg.style.backgroundSize = 'cover';
-                profileImg.style.backgroundPosition = 'center';
-                console.log('✅ Fallback avatar loaded');
-            }
-        }
+      <div class="rendering-section">
+        <div class="rendering-header">
+          <h3><i class="fas fa-cloud"></i> Distributed Rendering Farm</h3>
+          <p>Flamenco 3.9 render farm with CIFS-backed shared storage on 916GB Unraid NAS</p>
+        </div>
+        <div class="rendering-grid">
+          <div class="render-stat">
+            <span class="render-stat-value">Flamenco 3.9</span>
+            <span class="render-stat-label">Manager</span>
+          </div>
+          <div class="render-stat">
+            <span class="render-stat-value">Blender 5.1.1</span>
+            <span class="render-stat-label">Worker Node</span>
+          </div>
+          <div class="render-stat">
+            <span class="render-stat-value">751GB</span>
+            <span class="render-stat-label">Shared Storage</span>
+          </div>
+          <div class="render-stat">
+            <span class="render-stat-value">RTX 5090</span>
+            <span class="render-stat-label">GPU Worker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <!-- Problem Solving Section -->
+  <section class="problems-section" id="problems">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Problem Solving</span>
+        <h2>Key Challenges & Solutions</h2>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-number">01</div>
+          <h3>Secure Service Publishing</h3>
+          <p>How to publish 14 internal services securely without port forwarding?</p>
+          <p class="solution"><strong>Solution:</strong> Nginx Proxy Manager + Cloudflare Tunnel. Clean subdomains, origin IPs hidden, automatic TLS, WAF at edge.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">02</div>
+          <h3>Multi-Tier Environment</h3>
+          <p>How to run 4 complete environments for a client on one physical host?</p>
+          <p class="solution"><strong>Solution:</strong> 21 VMs across dev/qa/staging/prod with dedicated DB and CI/CD. Network isolation via VLAN 100.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">03</div>
+          <h3>Cross-Country Connectivity</h3>
+          <p>How to enable seamless connectivity for a remote team across two countries?</p>
+          <p class="solution"><strong>Solution:</strong> WireGuard for remote access + UniFi Site Magic for site-to-site tunneling. Automatic overlay networking.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">04</div>
+          <h3>Budget AI Platform</h3>
+          <p>How to run state-of-the-art AI models on a consumer GPU on a budget?</p>
+          <p class="solution"><strong>Solution:</strong> RTX 5090 with FP8 quantization enabling 34GB models. On-premises equivalent of $10K+ cloud GPU instances.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">05</div>
+          <h3>Multi-App Management</h3>
+          <p>How to manage 12+ apps with a two-person team?</p>
+          <p class="solution"><strong>Solution:</strong> Docker + Portainer centralization. 9 stacks managed from one UI. Automated deployments via templates.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">06</div>
+          <h3>Distributed Rendering</h3>
+          <p>How to provide distributed rendering without cloud costs?</p>
+          <p class="solution"><strong>Solution:</strong> Flamenco 3.9 render farm with GPU worker LXC. Shared CIFS storage on Unraid NAS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.backdropFilter = 'blur(10px)';
-            } else {
-                nav.style.background = 'white';
-                nav.style.backdropFilter = 'none';
-            }
-        });
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Contact</span>
+        <h2>Let's Work Together</h2>
+        <p>Have a project in mind? Let's discuss how I can help architect your infrastructure.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p>I'm always excited to take on new challenges in infrastructure architecture and solutions design.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail-text">
+              <h4>Locations</h4>
+              <p>Pollachi, India & Rockford, USA</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail-text">
+              <h4>Email</h4>
+              <p>raj@example.com</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-globe"></i></div>
+            <div class="contact-detail-text">
+              <h4>Website</h4>
+              <p>arijentek.com</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Tell me about your project..." required></textarea>
+          <button type="submit" class="btn btn-primary">SEND MESSAGE <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-        // Generate dynamic network connections
-        function createNetworkConnections() {
-            const cyberElements = document.querySelector('.cyber-elements');
-            
-            // Create connection lines between network nodes
-            const nodes = document.querySelectorAll('.network-node');
-            nodes.forEach((node, index) => {
-                if (index < nodes.length - 1) {
-                    const line = document.createElement('div');
-                    line.className = 'network-connection';
-                    line.style.cssText = `
-                        position: absolute;
-                        height: 1px;
-                        background: linear-gradient(90deg, #00ff00, transparent);
-                        animation: pulse-line 2s ease-in-out infinite;
-                        opacity: 0.3;
-                    `;
-                    
-                    // Calculate position between nodes
-                    const rect1 = node.getBoundingClientRect();
-                    const rect2 = nodes[index + 1].getBoundingClientRect();
-                    
-                    cyberElements.appendChild(line);
-                }
-            });
-        }
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="logo">RAJ<span>.</span></a>
+        <p>&copy; 2026 RAJ — Solutions Architect. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        // Add CSS for network connections
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes pulse-line {
-                0%, 100% { opacity: 0.1; transform: scaleX(0.5); }
-                50% { opacity: 0.5; transform: scaleX(1); }
-            }
-        `;
-        document.head.appendChild(style);
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
-        // Initialize everything when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            loadProfileImage();
-            setTimeout(createNetworkConnections, 1000);
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
