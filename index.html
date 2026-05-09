@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAJ - Solutions Architect Portfolio</title>
+  <title>Rajabinandhan P G | Founding Engineer & IT Infrastructure Leader</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -14,7 +14,6 @@
 
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#home" class="logo">RAJ<span>.</span></a>
@@ -23,7 +22,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#ai">AI Platform</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
@@ -34,18 +33,17 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container hero-container">
       <div class="hero-content">
         <span class="hero-greeting" data-aos="fade-down" data-aos-delay="100">Hello, I'm</span>
         <h1 data-aos="fade-up" data-aos-delay="200">RAJ<span>.</span></h1>
-        <h2 class="hero-title" data-aos="fade-up" data-aos-delay="300">Solutions Architect</h2>
-        <p data-aos="fade-up" data-aos-delay="400">Architecting and operating dual-site enterprise infrastructure across
-          India and the USA - spanning virtualization, cloud security, AI/ML platforms, and client-hosted environments
-          with 900+ Mbps aggregate bandwidth.</p>
+        <h2 class="hero-title" data-aos="fade-up" data-aos-delay="300">Founding Engineer & IT Infrastructure Leader</h2>
+        <p data-aos="fade-up" data-aos-delay="400">I build localized, compartmentalized systems across enterprise IT,
+          AI infrastructure, automation, and security. From healthcare operations to self-hosted LLM platforms, I focus
+          on making teams faster, safer, and less dependent on expensive cloud tooling.</p>
         <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
-          <a href="#experience" class="btn btn-primary">VIEW MY WORK <i class="fas fa-arrow-right"></i></a>
+          <a href="#experience" class="btn btn-primary">VIEW EXPERIENCE <i class="fas fa-arrow-right"></i></a>
           <a href="#contact" class="btn btn-secondary">GET IN TOUCH</a>
         </div>
         <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
@@ -53,13 +51,12 @@
               class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/RajabinandhanPG" class="social-link" target="_blank"><i
               class="fab fa-github"></i></a>
-          <a href="https://rajabinandhanpg.github.io/" class="social-link" target="_blank"><i
-              class="fas fa-globe"></i></a>
+          <a href="mailto:rajabinandhanpg@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
       <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
         <div class="image-wrapper">
-          <img src="IMG_8828.png" alt="RAJ - Solutions Architect">
+          <img src="IMG_8828.png" alt="Rajabinandhan P G portrait">
         </div>
       </div>
     </div>
@@ -77,184 +74,180 @@
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar" id="about">
+  <section class="stats-bar">
     <div class="stats-container">
       <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="counter" data-target="5">0</h3>
+        <h3 class="counter" data-target="7">0</h3>
         <p>Years Experience</p>
       </div>
       <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="counter" data-target="31">0</h3>
-        <p>Virtual Machines</p>
+        <h3 class="counter" data-target="200">0</h3>
+        <p>Users Supported</p>
       </div>
       <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-        <h3 class="counter" data-target="10">0</h3>
-        <p>VLAN Networks</p>
+        <h3 class="counter" data-target="30">0</h3>
+        <p>K Monthly Savings</p>
       </div>
       <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-        <h3 class="counter" data-target="14">0</h3>
-        <p>Public Services</p>
+        <h3 class="counter" data-target="500">0</h3>
+        <p>Tok/S Throughput</p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section" id="about-section">
+  <section class="about-section" id="about">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="label">About Me</span>
-        <h2>Solutions Architect & Infrastructure Engineer</h2>
+        <h2>Local-First Infrastructure, AI, and Operations</h2>
       </div>
       <div class="about-text-full" data-aos="fade-up" data-aos-delay="200">
-        <p>I architect and operate a dual-site infrastructure spanning <strong>Pollachi, Tamil Nadu (India)</strong> and
-          <strong>Rockford, Illinois (USA)</strong> that supports internal business operations, client-hosted workloads,
-          and a GPU-accelerated AI/ML platform.
-        </p>
-        <p>The estate runs on <strong>three Proxmox hosts</strong> (Dell PowerEdge R740xd and R630), a <strong>Unraid
-            NAS</strong>, and <strong>10 segmented VLANs</strong> connected via WireGuard and UniFi Site Magic tunnels.
-          The platform delivers <strong>31 virtual machines</strong>, <strong>4 LXC containers</strong>, <strong>9
-            Docker application stacks</strong>, and <strong>14 publicly exposed internal services</strong> — all managed
-          through Docker/Portainer automation, Nginx Proxy Manager, and Cloudflare Tunnels.</p>
-        <p>Beyond day-to-day operations, I designed and deployed a local AI inference platform powered by an <strong>RTX
-            5090 (32GB VRAM)</strong> running ComfyUI with FLUX.2, Hunyuan3D 2.1, and TRELLIS2 models (~87GB model
-          suite). I also built a distributed Blender rendering farm using Flamenco 3.9.</p>
+        <p>I design systems that keep critical workflows under team control. My work centers on localized AI
+          infrastructure, compartmentalized enterprise operations, and automation that reduces tool sprawl while
+          improving reliability.</p>
+        <p>At Castor Home Health Solutions, I serve as the sole IT lead for a 200+ person, five-company healthcare
+          organization, where I standardized secure operations, accelerated provisioning, automated communication
+          workflows, and drove monthly savings that reached the upper end of $30K.</p>
+        <p>At Arijentek and ISOFINITI, I built self-hosted LLM systems, voice infrastructure, dual-site operations, and
+          internal platforms that let technical teams ship faster without pushing sensitive workflows back into the
+          cloud.</p>
 
         <div class="about-details">
           <div class="detail-item" data-aos="fade-up" data-aos-delay="200">
             <span class="detail-label">Name</span>
-            <span class="detail-value">RAJ</span>
+            <span class="detail-value">Rajabinandhan P G</span>
           </div>
           <div class="detail-item" data-aos="fade-up" data-aos-delay="250">
-            <span class="detail-label">Role</span>
-            <span class="detail-value">Solutions Architect</span>
+            <span class="detail-label">Base</span>
+            <span class="detail-value">USA</span>
           </div>
           <div class="detail-item" data-aos="fade-up" data-aos-delay="300">
-            <span class="detail-label">Locations</span>
-            <span class="detail-value">India + USA</span>
+            <span class="detail-label">Focus</span>
+            <span class="detail-value">AI Infrastructure + Enterprise IT</span>
           </div>
           <div class="detail-item" data-aos="fade-up" data-aos-delay="350">
-            <span class="detail-label">Infrastructure</span>
-            <span class="detail-value">3 Proxmox Hosts</span>
+            <span class="detail-label">Approach</span>
+            <span class="detail-value">Localized, Secure, Cost-Aware</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section class="skills-section" id="skills">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="label">Expertise</span>
         <h2>Technical Skills</h2>
-        <p>Deep expertise across infrastructure, networking, security, AI/ML, and operations.</p>
+        <p>Hands-on depth across AI infrastructure, enterprise systems, security, automation, and recovery work.</p>
       </div>
       <div class="skills-grid">
         <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-category-header">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI / ML Infrastructure</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">llama.cpp</span>
+            <span class="skill-tag">LiteLLM</span>
+            <span class="skill-tag">Open WebUI</span>
+            <span class="skill-tag">Whisper</span>
+            <span class="skill-tag">Kokoro TTS</span>
+            <span class="skill-tag">Graphite RAG</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">CUDA</span>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-server"></i></div>
-            <h3>Infrastructure & Virtualization</h3>
+            <h3>Systems & DevOps</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">Proxmox VE</span>
             <span class="skill-tag">Docker</span>
             <span class="skill-tag">Portainer</span>
-            <span class="skill-tag">LXC Containers</span>
-            <span class="skill-tag">Ubuntu / Debian</span>
-            <span class="skill-tag">Unraid NAS</span>
-            <span class="skill-tag">GPU Passthrough</span>
+            <span class="skill-tag">Unraid</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">Zabbix</span>
+            <span class="skill-tag">LXC</span>
             <span class="skill-tag">PBS</span>
-          </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-          <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-            <h3>Networking</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">VLAN Design</span>
-            <span class="skill-tag">WireGuard</span>
-            <span class="skill-tag">Cloudflare Tunnel</span>
-            <span class="skill-tag">UniFi Ecosystem</span>
-            <span class="skill-tag">Nginx Proxy Manager</span>
-            <span class="skill-tag">IPv4 Subnetting</span>
-            <span class="skill-tag">HTTPS/TLS</span>
-            <span class="skill-tag">Site Magic</span>
           </div>
         </div>
         <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-category-header">
             <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
-            <h3>Security</h3>
+            <h3>Networking & Security</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">IDS/IPS</span>
-            <span class="skill-tag">Honeypots</span>
-            <span class="skill-tag">Vaultwarden</span>
+            <span class="skill-tag">VLAN Design</span>
+            <span class="skill-tag">UniFi</span>
+            <span class="skill-tag">WireGuard</span>
             <span class="skill-tag">Cloudflare Zero Trust</span>
-            <span class="skill-tag">MFA Strategy</span>
-            <span class="skill-tag">Network Segmentation</span>
-            <span class="skill-tag">WAF</span>
+            <span class="skill-tag">IDS/IPS</span>
+            <span class="skill-tag">MFA</span>
             <span class="skill-tag">Tailscale</span>
+            <span class="skill-tag">Nmap</span>
           </div>
         </div>
         <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-brain"></i></div>
-            <h3>AI / Machine Learning</h3>
+            <div class="skill-icon"><i class="fas fa-laptop-medical"></i></div>
+            <h3>Enterprise IT & MDM</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">ComfyUI</span>
-            <span class="skill-tag">PyTorch / CUDA</span>
-            <span class="skill-tag">FLUX.2</span>
-            <span class="skill-tag">Hunyuan3D 2.1</span>
-            <span class="skill-tag">TRELLIS2</span>
-            <span class="skill-tag">Blender</span>
-            <span class="skill-tag">Flamenco 3.9</span>
-            <span class="skill-tag">FP8 Quantization</span>
+            <span class="skill-tag">Action1</span>
+            <span class="skill-tag">GCPW</span>
+            <span class="skill-tag">Miradore</span>
+            <span class="skill-tag">Apple Business Manager</span>
+            <span class="skill-tag">Windows Provisioning</span>
+            <span class="skill-tag">Google Workspace</span>
+            <span class="skill-tag">Intune</span>
+            <span class="skill-tag">Entra ID</span>
           </div>
         </div>
         <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Monitoring & Operations</h3>
+            <div class="skill-icon"><i class="fas fa-gears"></i></div>
+            <h3>Backend & Automation</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Zabbix</span>
-            <span class="skill-tag">Healthchecks</span>
-            <span class="skill-tag">Cronicle</span>
-            <span class="skill-tag">Homarr</span>
-            <span class="skill-tag">Discord Alerts</span>
-            <span class="skill-tag">Jenkins CI/CD</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQLAlchemy</span>
+            <span class="skill-tag">n8n</span>
+            <span class="skill-tag">Google APIs</span>
+            <span class="skill-tag">Dialpad API</span>
+            <span class="skill-tag">Apps Script</span>
           </div>
         </div>
         <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-category-header">
-            <div class="skill-icon"><i class="fas fa-database"></i></div>
-            <h3>Applications</h3>
+            <div class="skill-icon"><i class="fas fa-hard-drive"></i></div>
+            <h3>Recovery & Forensics</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">ERPNext</span>
-            <span class="skill-tag">n8n</span>
-            <span class="skill-tag">Plane PM</span>
-            <span class="skill-tag">Docmost</span>
-            <span class="skill-tag">NocoDB</span>
-            <span class="skill-tag">Penpot</span>
-            <span class="skill-tag">Portainer</span>
+            <span class="skill-tag">Data Recovery</span>
+            <span class="skill-tag">Digital Forensics</span>
+            <span class="skill-tag">OSINT</span>
+            <span class="skill-tag">SQLmap</span>
+            <span class="skill-tag">Metasploit</span>
+            <span class="skill-tag">Incident Response</span>
+            <span class="skill-tag">Vulnerability Analysis</span>
+            <span class="skill-tag">Hardening</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
   <section class="experience-section" id="experience">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="label">Experience</span>
-        <h2>Implemented Solutions</h2>
-        <p>Real-world infrastructure projects delivering measurable business impact.</p>
+        <h2>Selected Experience</h2>
+        <p>Representative work across healthcare IT, local-first AI platforms, dual-site infrastructure, and recovery-driven security.</p>
       </div>
       <div class="timeline">
         <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
@@ -262,17 +255,14 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
-            <span class="timeline-tag">Core Infrastructure</span>
-            <h3>Dual-Site Infrastructure Architecture</h3>
-            <p>Deployed Dell PowerEdge R740xd (India, 128GB RAM / 96 vCPU) and Dell PowerEdge R630 (USA) as primary
-              Proxmox hosts. Connected the two sites with UniFi Site Magic tunnels and WireGuard, creating a
-              cross-country overlay network. Single hypervisor standard reduces operational complexity with iDRAC
-              out-of-band management.</p>
+            <span class="timeline-tag">Castor Home Health Solutions</span>
+            <h3>Sole IT Lead for 200+ Users Across 5 Companies</h3>
+            <p>Owned enterprise IT for a five-company healthcare organization, standardizing localized and compartmentalized controls, accelerating provisioning by 85 percent, and driving monthly savings that reached the upper end of $30K.</p>
             <div class="timeline-tech">
-              <span>Proxmox VE</span>
-              <span>WireGuard</span>
-              <span>UniFi Site Magic</span>
-              <span>Cloudflare</span>
+              <span>Action1</span>
+              <span>GCPW</span>
+              <span>UniFi</span>
+              <span>HIPAA / BAA</span>
             </div>
           </div>
         </div>
@@ -281,16 +271,14 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
-            <span class="timeline-tag">Network</span>
-            <h3>Enterprise VLAN Segmentation</h3>
-            <p>Designed and deployed 10 VLANs across both sites (5 per site), each on a dedicated /24 subnet. Client
-              traffic fully isolated on VLAN 100. Dual WAN (ACT Fibernet 300/300 + MEGNET 300/300) with automatic
-              failover ensures continuous uptime.</p>
+            <span class="timeline-tag">Castor Automation</span>
+            <h3>Operational Automation with Google and Dialpad APIs</h3>
+            <p>Built automation workflows for synchronization, provisioning, email signature rollout, contact updates, marketing, reminders, and operational communication across 150+ workstations and 250+ phones and tablets.</p>
             <div class="timeline-tech">
-              <span>UniFi UDM SE/Pro</span>
-              <span>USW 16 PoE</span>
-              <span>VLANs</span>
-              <span>DHCP</span>
+              <span>Google APIs</span>
+              <span>Dialpad API</span>
+              <span>Google Workspace</span>
+              <span>EMR / Fax</span>
             </div>
           </div>
         </div>
@@ -299,15 +287,14 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
-            <span class="timeline-tag">Platform</span>
-            <h3>Container Platform & Internal Toolchain</h3>
-            <p>Deployed Docker with Portainer on dedicated Proxmox VM. Organized services into 9 Portainer stacks. Team
-              productivity tools all self-hosted — eliminates SaaS licensing costs and keeps data on-premises.</p>
+            <span class="timeline-tag">ISOFINITI / Arijentek</span>
+            <h3>Localized LLM Platform with 1M Context and 500+ Tok/S</h3>
+            <p>Built a self-hosted LLM platform for 10+ remote users with a shared 1M-token context window, 10 parallel sessions, 500+ tok/s aggregate throughput, up to 92 tok/s per user, and roughly 3x higher TPS than frontier cloud models.</p>
             <div class="timeline-tech">
-              <span>Docker</span>
-              <span>Portainer</span>
-              <span>Nginx Proxy Manager</span>
-              <span>Ubuntu 22/24</span>
+              <span>llama.cpp</span>
+              <span>LiteLLM</span>
+              <span>Open WebUI</span>
+              <span>RDNA4 GPUs</span>
             </div>
           </div>
         </div>
@@ -316,16 +303,14 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
-            <span class="timeline-tag">Security</span>
-            <h3>Public Application Exposure via Reverse Proxy</h3>
-            <p>Published 14 internal services securely through Nginx Proxy Manager and Cloudflare Tunnel. No port
-              forwarding on WAN gateways. Origin server IPs hidden behind Cloudflare's edge with automatic certificate
-              management.</p>
+            <span class="timeline-tag">ISOFINITI v2</span>
+            <h3>Module 2C Voice Engine and Local RAG Services</h3>
+            <p>Built the Voice Engine on LXC 101 with RTX 5090, Whisper-Large-v3, Kokoro TTS, FastAPI STT/TTS endpoints, streaming transcripts, bot detection, health probes, and localized Graphite RAG services for secure internal knowledge access.</p>
             <div class="timeline-tech">
-              <span>Nginx Proxy Manager</span>
-              <span>Cloudflare Tunnel</span>
-              <span>Certificates</span>
-              <span>WAF</span>
+              <span>Whisper-Large-v3</span>
+              <span>Kokoro TTS</span>
+              <span>FastAPI</span>
+              <span>Graphite RAG</span>
             </div>
           </div>
         </div>
@@ -334,16 +319,14 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
-            <span class="timeline-tag">Client Hosting</span>
-            <h3>Multi-Tier Client Environment (Fonespot)</h3>
-            <p>Deployed 21 VMs on USA Proxmox host organized into 4 environment tiers (dev, QA, staging, prod) plus
-              dedicated database and CI/CD servers. Hostnames follow env.service.fonespot.com convention. Full software
-              delivery lifecycle on startup-operated equipment.</p>
+            <span class="timeline-tag">Dual-Site Infrastructure</span>
+            <h3>USA + India Operations, Backups, and Client Delivery</h3>
+            <p>Architected and managed a dual-site infrastructure spanning Illinois and Tamil Nadu, including site-to-site networking, 21 client VMs across isolated environments, Jenkins-driven deployment flows, and resilient cross-continent backup architecture.</p>
             <div class="timeline-tech">
               <span>Proxmox</span>
+              <span>WireGuard</span>
               <span>Jenkins</span>
-              <span>Debian 12</span>
-              <span>VLAN Isolation</span>
+              <span>Unraid / PBS</span>
             </div>
           </div>
         </div>
@@ -352,15 +335,14 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-content">
-            <span class="timeline-tag">Security & Operations</span>
-            <h3>Backup, DR & Security Hardening</h3>
-            <p>Deployed Proxmox Backup Server on Unraid NAS with daily deduplicated backups. Layered defense with
-              Vaultwarden, Cloudflare Zero Trust, UniFi IDS/IPS, honeypots, and MFA across 8+ critical platforms.</p>
+            <span class="timeline-tag">Aditas + Freelance</span>
+            <h3>Recovery, Forensics, Migration, and SMB Modernization</h3>
+            <p>Led recovery-oriented investigations on compromised systems and removable media, restored critical data, delivered hardening guidance, and modernized client environments through M365 migrations, virtualization, storage, and workflow automation.</p>
             <div class="timeline-tech">
-              <span>PBS</span>
-              <span>Vaultwarden</span>
-              <span>Cloudflare Zero Trust</span>
-              <span>IDS/IPS</span>
+              <span>Digital Forensics</span>
+              <span>Data Recovery</span>
+              <span>Microsoft 365</span>
+              <span>Proxmox</span>
             </div>
           </div>
         </div>
@@ -368,170 +350,161 @@
     </div>
   </section>
 
-  <!-- AI Platform Section -->
-  <section class="ai-section" id="ai">
+  <section class="ai-section" id="projects">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="label">AI/ML</span>
-        <h2>GPU-Powered AI Platform</h2>
-        <p>On-premises AI inference and generation platform — local equivalent of $10K+ cloud GPU instances.</p>
+        <span class="label">Projects</span>
+        <h2>Featured Systems and Builds</h2>
+        <p>Selected projects from the updated resume, focused on local-first AI, enterprise automation, and resilient infrastructure.</p>
       </div>
       <div class="ai-grid">
         <div class="ai-card" data-aos="zoom-in" data-aos-delay="100">
           <div class="ai-card-icon"><i class="fas fa-microchip"></i></div>
-          <h3>GPU Hardware</h3>
+          <h3>Multi-GPU LLM Inference Cluster</h3>
           <div class="ai-specs">
             <div class="spec-row">
-              <span class="spec-label">GPU</span>
-              <span class="spec-value">NVIDIA RTX 5090</span>
+              <span class="spec-label">Context Window</span>
+              <span class="spec-value">1M Shared</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">VRAM</span>
-              <span class="spec-value">32GB GDDR7</span>
+              <span class="spec-label">Parallel Sessions</span>
+              <span class="spec-value">10</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Compute</span>
-              <span class="spec-value">CUDA 12.8</span>
+              <span class="spec-label">Aggregate TPS</span>
+              <span class="spec-value">500+</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Framework</span>
-              <span class="spec-value">PyTorch 2.11</span>
+              <span class="spec-label">API Spend Localized</span>
+              <span class="spec-value">$8K-$10K</span>
             </div>
           </div>
         </div>
         <div class="ai-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="ai-card-icon"><i class="fas fa-cube"></i></div>
-          <h3>AI Models Deployed</h3>
+          <div class="ai-card-icon"><i class="fas fa-wave-square"></i></div>
+          <h3>Module 2C Voice Engine</h3>
           <div class="ai-specs">
             <div class="spec-row">
-              <span class="spec-label">FLUX.2 Dev FP8</span>
-              <span class="spec-value">34GB</span>
+              <span class="spec-label">Compute Node</span>
+              <span class="spec-value">LXC 101 + RTX 5090</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Mistral-FLUX2 FP8</span>
-              <span class="spec-value">17GB</span>
+              <span class="spec-label">STT</span>
+              <span class="spec-value">Whisper-Large-v3</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">Hunyuan3D v2.1</span>
-              <span class="spec-value">6.9GB</span>
+              <span class="spec-label">TTS</span>
+              <span class="spec-value">Kokoro</span>
             </div>
             <div class="spec-row">
-              <span class="spec-label">TRELLIS2 Image</span>
-              <span class="spec-value">Large</span>
+              <span class="spec-label">Services</span>
+              <span class="spec-value">:8091 / :8092</span>
             </div>
           </div>
         </div>
         <div class="ai-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="ai-card-icon"><i class="fas fa-palette"></i></div>
-          <h3>Capabilities</h3>
+          <div class="ai-card-icon"><i class="fas fa-diagram-project"></i></div>
+          <h3>Graphite RAG + Ops Automation</h3>
           <div class="ai-capabilities">
-            <span class="ai-cap">Image Generation</span>
-            <span class="ai-cap">3D Mesh Generation</span>
-            <span class="ai-cap">PBR Texturing</span>
-            <span class="ai-cap">Asset Generation</span>
-            <span class="ai-cap">Background Removal</span>
-            <span class="ai-cap">Custom Workflows</span>
+            <span class="ai-cap">Localized RAG</span>
+            <span class="ai-cap">Document Retrieval</span>
+            <span class="ai-cap">Google APIs</span>
+            <span class="ai-cap">Dialpad API</span>
+            <span class="ai-cap">Review Automation</span>
+            <span class="ai-cap">Route Optimization</span>
           </div>
         </div>
       </div>
 
       <div class="rendering-section">
         <div class="rendering-header">
-          <h3><i class="fas fa-cloud"></i> Distributed Rendering Farm</h3>
-          <p>Flamenco 3.9 render farm with CIFS-backed shared storage on 916GB Unraid NAS</p>
+          <h3><i class="fas fa-layer-group"></i> Supporting Platform Footprint</h3>
+          <p>Additional systems from the portfolio: render infrastructure, client environments, and operational automations.</p>
         </div>
         <div class="rendering-grid">
           <div class="render-stat">
+            <span class="render-stat-value">21 VMs</span>
+            <span class="render-stat-label">Client Environments</span>
+          </div>
+          <div class="render-stat">
             <span class="render-stat-value">Flamenco 3.9</span>
-            <span class="render-stat-label">Manager</span>
+            <span class="render-stat-label">Render Farm</span>
           </div>
           <div class="render-stat">
-            <span class="render-stat-value">Blender 5.1.1</span>
-            <span class="render-stat-label">Worker Node</span>
+            <span class="render-stat-value">72 Hours</span>
+            <span class="render-stat-label">Website Recovery</span>
           </div>
           <div class="render-stat">
-            <span class="render-stat-value">751GB</span>
-            <span class="render-stat-label">Shared Storage</span>
-          </div>
-          <div class="render-stat">
-            <span class="render-stat-value">RTX 5090</span>
-            <span class="render-stat-label">GPU Worker</span>
+            <span class="render-stat-value">AppSheet + Maps</span>
+            <span class="render-stat-label">Route Automation</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem Solving Section -->
-  <section class="problems-section" id="problems">
+  <section class="problems-section" id="impact">
     <div class="container">
       <div class="section-header">
-        <span class="label">Problem Solving</span>
-        <h2>Key Challenges & Solutions</h2>
+        <span class="label">Impact</span>
+        <h2>What I Solve Under Constraint</h2>
       </div>
       <div class="problems-grid">
         <div class="problem-card">
           <div class="problem-number">01</div>
-          <h3>Secure Service Publishing</h3>
-          <p>How to publish 14 internal services securely without port forwarding?</p>
-          <p class="solution"><strong>Solution:</strong> Nginx Proxy Manager + Cloudflare Tunnel. Clean subdomains,
-            origin IPs hidden, automatic TLS, WAF at edge.</p>
+          <h3>Reduce Tool Spend</h3>
+          <p>How do you modernize IT operations without growing SaaS sprawl?</p>
+          <p class="solution"><strong>Solution:</strong> Localized infrastructure, internal tooling, and careful API-driven automation that pushed Castor's monthly savings to the upper end of $30K.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">02</div>
-          <h3>Multi-Tier Environment</h3>
-          <p>How to run 4 complete environments for a client on one physical host?</p>
-          <p class="solution"><strong>Solution:</strong> 21 VMs across dev/qa/staging/prod with dedicated DB and CI/CD.
-            Network isolation via VLAN 100.</p>
+          <h3>Keep AI Local</h3>
+          <p>How do you give a team high-performance AI without shipping sensitive workflows back to the cloud?</p>
+          <p class="solution"><strong>Solution:</strong> Self-hosted inference, shared 1M context, 10 parallel sessions, and localized spend replacing $8K-$10K in cloud API usage.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">03</div>
-          <h3>Cross-Country Connectivity</h3>
-          <p>How to enable seamless connectivity for a remote team across two countries?</p>
-          <p class="solution"><strong>Solution:</strong> WireGuard for remote access + UniFi Site Magic for site-to-site
-            tunneling. Automatic overlay networking.</p>
+          <h3>Secure Healthcare Operations</h3>
+          <p>How do you harden a five-company healthcare org with one IT owner?</p>
+          <p class="solution"><strong>Solution:</strong> Localized, compartmentalized endpoint and identity controls, HIPAA / BAA-aligned governance, and fast remote remediation across 200+ users.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">04</div>
-          <h3>Budget AI Platform</h3>
-          <p>How to run state-of-the-art AI models on a consumer GPU on a budget?</p>
-          <p class="solution"><strong>Solution:</strong> RTX 5090 with FP8 quantization enabling 34GB models.
-            On-premises equivalent of $10K+ cloud GPU instances.</p>
+          <h3>Recover Compromised Systems</h3>
+          <p>How do you stop a reinfecting production website and restore trust quickly?</p>
+          <p class="solution"><strong>Solution:</strong> Incident response, malware removal, hardening, and recovery work that restored secure operations in under 72 hours.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">05</div>
-          <h3>Multi-App Management</h3>
-          <p>How to manage 12+ apps with a two-person team?</p>
-          <p class="solution"><strong>Solution:</strong> Docker + Portainer centralization. 9 stacks managed from one
-            UI. Automated deployments via templates.</p>
+          <h3>Scale Communications and Field Ops</h3>
+          <p>How do you keep messaging, outreach, reminders, and support aligned across distributed teams?</p>
+          <p class="solution"><strong>Solution:</strong> Google APIs, Dialpad API, EMR-adjacent automation, and synchronized internal communications that cut manual overhead and improved throughput.</p>
         </div>
         <div class="problem-card">
           <div class="problem-number">06</div>
-          <h3>Distributed Rendering</h3>
-          <p>How to provide distributed rendering without cloud costs?</p>
-          <p class="solution"><strong>Solution:</strong> Flamenco 3.9 render farm with GPU worker LXC. Shared CIFS
-            storage on Unraid NAS.</p>
+          <h3>Run Multi-Site Delivery</h3>
+          <p>How do you support cross-border engineering and client hosting with a lean footprint?</p>
+          <p class="solution"><strong>Solution:</strong> Dual-site architecture across Illinois and Tamil Nadu, isolated client environments, resilient backups, and automated deployment flows.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="section-header">
         <span class="label">Contact</span>
-        <h2>Let's Work Together</h2>
-        <p>Have a project in mind? Let's discuss how I can help architect your infrastructure.</p>
+        <h2>Let's Build Something Useful</h2>
+        <p>If you need help with AI infrastructure, enterprise IT, secure automation, or operational systems, let's talk.</p>
       </div>
       <div class="contact-wrapper">
         <div class="contact-info">
           <h3>Get In Touch</h3>
-          <p>I'm always excited to take on new challenges in infrastructure architecture and solutions design.</p>
+          <p>I enjoy high-ownership work where infrastructure, security, and automation all need to move together.</p>
           <div class="contact-detail">
             <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="contact-detail-text">
-              <h4>Locations</h4>
+              <h4>Location</h4>
               <p>USA</p>
             </div>
           </div>
@@ -539,49 +512,46 @@
             <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
             <div class="contact-detail-text">
               <h4>Email</h4>
-              <p>raj@arijentek.com</p>
+              <p>rajabinandhanpg@gmail.com</p>
             </div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon"><i class="fas fa-globe"></i></div>
+            <div class="contact-detail-icon"><i class="fab fa-github"></i></div>
             <div class="contact-detail-text">
-              <h4>Website</h4>
-              <p><a href="https://linktr.ee/RajabinandhanPG" target="_blank">RajabinandhanPG</a></p>
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/RajabinandhanPG" target="_blank">RajabinandhanPG</a></p>
             </div>
           </div>
         </div>
         <form class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
           </div>
-          <input type="text" placeholder="Subject">
-          <textarea placeholder="Tell me about your project..." required></textarea>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" placeholder="Tell me about your project..." required></textarea>
           <button type="submit" class="btn btn-primary">SEND MESSAGE <i class="fas fa-paper-plane"></i></button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <a href="#home" class="logo">RAJ<span>.</span></a>
-        <p>&copy; 2026 RAJ — Solutions Architect. All Rights Reserved.</p>
+        <p>&copy; 2026 Rajabinandhan P G. All Rights Reserved.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/raj-abinandhanpg/" class="social-link" target="_blank"><i
               class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/RajabinandhanPG" class="social-link" target="_blank"><i
               class="fab fa-github"></i></a>
-          <a href="https://rajabinandhanpg.github.io/" class="social-link" target="_blank"><i
-              class="fas fa-globe"></i></a>
+          <a href="mailto:rajabinandhanpg@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top -->
   <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

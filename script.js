@@ -112,12 +112,19 @@ function handleSubmit(e) {
   const form = e.target;
   const btn = form.querySelector('.btn');
   const originalText = btn.innerHTML;
-  btn.innerHTML = '<i class="fas fa-check"></i> MESSAGE SENT!';
+  const name = form.querySelector('input[name="name"]').value.trim();
+  const email = form.querySelector('input[name="email"]').value.trim();
+  const subject = form.querySelector('input[name="subject"]').value.trim() || 'Portfolio Inquiry';
+  const message = form.querySelector('textarea[name="message"]').value.trim();
+
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  window.location.href = `mailto:rajabinandhanpg@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+  btn.innerHTML = '<i class="fas fa-check"></i> OPENED EMAIL';
   btn.style.background = '#22c55e';
   setTimeout(() => {
     btn.innerHTML = originalText;
     btn.style.background = '';
-    form.reset();
   }, 3000);
 }
 
