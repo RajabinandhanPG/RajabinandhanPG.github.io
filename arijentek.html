@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arijentek & ISOFINITI | Rajabinandhan P G</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">RAJ<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="castor.html">Castor</a></li>
+        <li><a href="arijentek.html" class="active">Arijentek</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Architecture Portfolio</span>
+      <h1>Arijentek / ISOFINITI Infrastructure</h1>
+      <p>This page expands the Arijentek and ISOFINITI work into a deeper architecture narrative: local-first LLM infrastructure, Module 2C voice services, Graphite RAG, dual-site operations, client delivery environments, and planned roadmap items.</p>
+      <div class="page-links">
+        <a href="#llm-platform" class="detail-link">LLM Platform</a>
+        <a href="#voice-engine" class="detail-link">Module 2C</a>
+        <a href="#dual-site" class="detail-link">Dual-Site Infra</a>
+        <a href="#roadmap" class="detail-link">Planned Systems</a>
+      </div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <strong>1M</strong>
+          <span>Shared Context</span>
+        </div>
+        <div class="metric-card">
+          <strong>500+</strong>
+          <span>Aggregate Tok/S</span>
+        </div>
+        <div class="metric-card">
+          <strong>21</strong>
+          <span>Client VMs</span>
+        </div>
+        <div class="metric-card">
+          <strong>10</strong>
+          <span>Segmented VLANs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="llm-platform">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">LLM Platform</span>
+        <h2>Self-Hosted Inference for a Distributed Team</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>What Was Built</h3>
+          <p>Built and deployed a compartmentalized local LLM platform for 10+ remote users, replacing cloud API usage with a shared internal inference system.</p>
+          <ul class="bullet-list">
+            <li>Dual AMD Radeon AI PRO R9700 GPUs with 64GB combined VRAM.</li>
+            <li>Qwen3.6-35B via llama.cpp Vulkan backend.</li>
+            <li>LiteLLM proxy with usage tracking, access control, and multi-user routing.</li>
+            <li>Open WebUI for direct human use and API-backed agent access.</li>
+            <li>Localized model serving with no external LLM API dependency.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Operational Impact</h3>
+          <ul class="bullet-list">
+            <li>Supported a shared 1M-token context window and 10 parallel sessions.</li>
+            <li>Delivered 500+ tok/s aggregate throughput and up to 92 tok/s per user.</li>
+            <li>Ran roughly 3x higher TPS than frontier cloud model workflows for targeted tasks.</li>
+            <li>Localized an estimated $8K-$10K in cloud API credits.</li>
+            <li>Reduced turnaround time on targeted inference tasks by roughly 70%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Users Served</td>
+              <td>10+ remote team members</td>
+            </tr>
+            <tr>
+              <td>Context</td>
+              <td>1M shared context</td>
+            </tr>
+            <tr>
+              <td>Parallel Sessions</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Aggregate Throughput</td>
+              <td>500+ tok/s</td>
+            </tr>
+            <tr>
+              <td>Per-User Throughput</td>
+              <td>Up to 92 tok/s</td>
+            </tr>
+            <tr>
+              <td>Cost Outcome</td>
+              <td>$8K-$10K API usage localized</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="voice-engine">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">ISOFINITI v2</span>
+        <h2>Module 2C Voice Engine and Graphite RAG</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Voice Engine Build</h3>
+          <p>Built ISOFINITI v2 Module 2C on LXC 101 with RTX 5090 as a local speech and voice service layer.</p>
+          <ul class="bullet-list">
+            <li>Whisper-Large-v3 with CUDA for speech-to-text.</li>
+            <li>Kokoro TTS for local text-to-speech.</li>
+            <li>FastAPI service on :8091 for STT and :8092 for TTS.</li>
+            <li>Streaming transcript endpoint and health probe endpoint.</li>
+            <li>Bot-detection heuristics and install automation with working code.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Graphite RAG</h3>
+          <p>Built a localized retrieval layer so knowledge workflows stayed inside firm-controlled infrastructure.</p>
+          <ul class="bullet-list">
+            <li>Localized document retrieval instead of cloud-managed knowledge tooling.</li>
+            <li>Compartmentalized internal retrieval workflows for secure knowledge access.</li>
+            <li>Designed to support internal team usage without sending documents off-platform.</li>
+            <li>Positioned as part of a broader local-first AI operations stack.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="dual-site">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Infrastructure</span>
+        <h2>Dual-Site Operations, Client Delivery, and Backup Design</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Dual-Site Footprint</h3>
+          <ul class="bullet-list">
+            <li>Operations spanning Illinois, USA and Tamil Nadu, India.</li>
+            <li>Three Proxmox hosts across the estate.</li>
+            <li>10 segmented VLANs connected through UniFi Site Magic and WireGuard.</li>
+            <li>31 virtual machines, 4+ LXC containers, and multiple shared internal services.</li>
+            <li>Designed for cross-border operations, backup resilience, and secure service isolation.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Fonespot Client Environment</h3>
+          <ul class="bullet-list">
+            <li>21 VMs across dev, QA, staging, and production.</li>
+            <li>Dedicated database servers and Jenkins CI/CD.</li>
+            <li>Network-isolated environments for safer client delivery.</li>
+            <li>12+ application stacks and multi-host deployment patterns.</li>
+            <li>Structured to let a lean technical team support full-lifecycle delivery.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Storage, Backup, and Recovery</h3>
+          <ul class="bullet-list">
+            <li>3-2-1 style backup thinking with Proxmox Backup Server and Unraid NAS.</li>
+            <li>Cross-continent deduplicated backup replication patterns.</li>
+            <li>Designed for rapid recovery, cross-site protection, and low operational overhead.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>AI and Rendering Extensions</h3>
+          <ul class="bullet-list">
+            <li>RTX 5090 AI inference environment for FLUX.2, Hunyuan3D 2.1, and TRELLIS2.</li>
+            <li>Distributed render farm using Flamenco 3.9 and Blender.</li>
+            <li>On-prem compute footprint positioned as the equivalent of $10K+ monthly cloud GPU usage.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="platform-design">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Platform Design</span>
+        <h2>ISOFINITI Recruitment Platform Architecture</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Platform Capabilities</h3>
+          <ul class="bullet-list">
+            <li>Multi-tenant architecture with RBAC and role-specific access control.</li>
+            <li>BIPA-compliant consent logging and audit trail design.</li>
+            <li>Candidate intake across Naukri, Indeed, and email workflows.</li>
+            <li>Deduplication using normalized identifiers and SHA-256 hashing.</li>
+            <li>Zero-hardcoded-secrets architecture through managed configuration patterns.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Delivery and Team Enablement</h3>
+          <ul class="bullet-list">
+            <li>Built internal infrastructure patterns that let the team operate on secure, localized systems.</li>
+            <li>Partnered on team composition, resource planning, and infrastructure budgeting.</li>
+            <li>Reduced tooling dependence while improving delivery control and privacy posture.</li>
+            <li>Used local-first AI as the enabling layer instead of an external dependency stack.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Roadmap</span>
+        <h2>Designed but Not Yet Deployed</h2>
+      </div>
+      <div class="section-grid section-stack">
+        <div class="content-card">
+          <h3>SSO and Identity Centralization</h3>
+          <p>Planned central identity flows using Authentik, Microsoft 365, Vaultwarden, and stronger MFA-enforced access to reduce credential sprawl.</p>
+        </div>
+        <div class="content-card">
+          <h3>Formal Patch and Vulnerability Management</h3>
+          <p>Planned maintenance cadence, vulnerability scanning, and documented update windows across infrastructure, network devices, and application layers.</p>
+        </div>
+        <div class="content-card">
+          <h3>Dedicated India Office Infrastructure</h3>
+          <p>Designed office-grade physical infrastructure improvements including rack, power resilience, environmental controls, and more formal physical security.</p>
+        </div>
+        <div class="content-card">
+          <h3>Offsite Backup and Disaster Recovery Copy</h3>
+          <p>Planned true offsite backup resilience through secondary physical or cloud-backed encrypted copies and automated verification.</p>
+        </div>
+      </div>
+      <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Return to main portfolio</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo">RAJ<span>.</span></a>
+        <p>&copy; 2026 Rajabinandhan P G. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/raj-abinandhanpg/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/RajabinandhanPG" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:rajabinandhanpg@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+
+</html>

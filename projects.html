@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Archive | Rajabinandhan P G</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">RAJ<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="castor.html">Castor</a></li>
+        <li><a href="arijentek.html">Arijentek</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="recovery.html">Recovery</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Project Archive</span>
+      <h1>Detailed Project and Systems Archive</h1>
+      <p>This page is the content-heavy project dump for the portfolio. It expands the homepage cards into deeper technical summaries while keeping the same facts aligned with the resume and portfolio notes.</p>
+      <div class="page-links">
+        <a href="#llm-cluster" class="detail-link">LLM Cluster</a>
+        <a href="#module-2c" class="detail-link">Module 2C</a>
+        <a href="#graphite-rag" class="detail-link">Graphite RAG</a>
+        <a href="#fonespot" class="detail-link">Fonespot</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="llm-cluster">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Project 01</span>
+        <h2>Multi-GPU LLM Inference Cluster</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Technical Summary</h3>
+          <ul class="bullet-list">
+            <li>Dual AMD Radeon AI PRO R9700 setup with 64GB combined VRAM.</li>
+            <li>Qwen3.6-35B deployed through llama.cpp Vulkan.</li>
+            <li>Shared 1M-token context window with 10 parallel sessions.</li>
+            <li>500+ tok/s aggregate throughput and up to 92 tok/s per user.</li>
+            <li>Designed as a localized replacement for recurring cloud inference spend.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Why It Matters</h3>
+          <ul class="bullet-list">
+            <li>Localized $8K-$10K in cloud API usage.</li>
+            <li>Delivered roughly 3x higher TPS than frontier cloud models for targeted workloads.</li>
+            <li>Created a reusable internal AI capability for developers, operational users, and automation flows.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="module-2c">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Project 02</span>
+        <h2>Module 2C Voice Engine</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Build Details</h3>
+          <ul class="bullet-list">
+            <li>LXC 101 with RTX 5090 as the compute node.</li>
+            <li>Whisper-Large-v3 with CUDA for STT.</li>
+            <li>Kokoro TTS for local TTS.</li>
+            <li>FastAPI on :8091 for STT and :8092 for TTS.</li>
+            <li>Streaming transcript endpoint, health probe, and bot-detection heuristics.</li>
+            <li>Install script and full working code delivered as part of the module.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Role in the Larger Stack</h3>
+          <ul class="bullet-list">
+            <li>Extends ISOFINITI's internal AI infrastructure beyond text inference.</li>
+            <li>Keeps speech processing local and controllable.</li>
+            <li>Fits into the broader local-first architecture alongside the LLM platform and RAG services.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="graphite-rag">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Project 03</span>
+        <h2>Graphite RAG</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Purpose</h3>
+          <p>Built a localized retrieval-augmented generation environment for secure internal knowledge access.</p>
+          <ul class="bullet-list">
+            <li>Kept document workflows and retrieval inside firm-controlled infrastructure.</li>
+            <li>Supported internal knowledge access without pushing documents into external hosted systems.</li>
+            <li>Aligned with the broader compartmentalized architecture used across AI and infrastructure work.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Adjacent Automation Work</h3>
+          <ul class="bullet-list">
+            <li>Connected to a broader pattern of operational automation using Google APIs and Dialpad API.</li>
+            <li>Fits the same design principle as local inference: retain control, reduce vendor dependence, preserve data locality.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="fonespot">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Project 04</span>
+        <h2>Fonespot Multi-Environment Stack</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Environment Design</h3>
+          <ul class="bullet-list">
+            <li>21 VMs across dev, QA, staging, and production.</li>
+            <li>Dedicated databases and Jenkins CI/CD server.</li>
+            <li>Isolated client delivery environments for safer release management.</li>
+            <li>Supports a full application lifecycle on controlled infrastructure.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Infrastructure Patterns</h3>
+          <ul class="bullet-list">
+            <li>Proxmox-hosted guest infrastructure.</li>
+            <li>VLAN-isolated deployment model.</li>
+            <li>Aligned to the same dual-site operations model used across Arijentek.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="route-automation">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Project 05</span>
+        <h2>Automated Logistical Route Optimization</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Workflow Summary</h3>
+          <ul class="bullet-list">
+            <li>Built a serverless scheduling automation workflow using AppSheet and the Google Maps API.</li>
+            <li>Calculated routes between patient visits and simplified field coordination.</li>
+            <li>Reduced waste in daily travel and improved operational clarity.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Why It Matters</h3>
+          <ul class="bullet-list">
+            <li>Good example of using APIs and lightweight workflow tooling instead of larger software purchases.</li>
+            <li>Shows the same systems mindset as the infrastructure work: remove friction, improve throughput, reduce cost.</li>
+          </ul>
+        </div>
+      </div>
+      <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Return to main portfolio</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo">RAJ<span>.</span></a>
+        <p>&copy; 2026 Rajabinandhan P G. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/raj-abinandhanpg/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/RajabinandhanPG" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:rajabinandhanpg@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+
+</html>
