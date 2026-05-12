@@ -50,13 +50,14 @@ function animateCounters() {
 
     let current = 0;
     const increment = target / 60;
+    const suffix = counter.parentElement.textContent.replace(/\d/.g, '').trim();
     const timer = setInterval(() => {
       current += increment;
       if (current >= target) {
         current = target;
         clearInterval(timer);
       }
-      counter.textContent = Math.floor(current) + '+';
+      counter.textContent = Math.floor(current);
     }, 20);
 
     counter.dataset.animated = 'true';
