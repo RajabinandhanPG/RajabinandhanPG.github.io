@@ -104,8 +104,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-
-
 // ===== CONTACT FORM =====
 function handleSubmit(e) {
   e.preventDefault();
@@ -132,3 +130,52 @@ function handleSubmit(e) {
 if (window.scrollY > 50) {
   navbar.classList.add('scrolled');
 }
+
+// ===== SCROLL REVEAL (replaces AOS) =====
+const revealElements = document.querySelectorAll(
+  '.hero-greeting, .hero-content h1, .hero-content h2, .hero-content p, .hero-buttons, .hero-social, .hero-image, .stat-item, .section-header, .about-text-full, .detail-item, .skill-category, .timeline-item, .ai-card, .problem-card, .render-stat, .contact-info, .contact-form, .content-card, .rendering-header, .rendering-section, .page-hero'
+);
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = parseInt(el.dataset.revealDelay || 0);
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, delay);
+        revealObserver.unobserve(el);
+      }
+    });
+  },
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+
+// Stagger delays for grid items
+document.querySelectorAll('.stat-item').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 80}ms`;
+});
+document.querySelectorAll('.skill-category').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 60}ms`;
+});
+document.querySelectorAll('.timeline-item').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 60}ms`;
+});
+document.querySelectorAll('.ai-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 80}ms`;
+});
+document.querySelectorAll('.problem-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 60}ms`;
+});
+document.querySelectorAll('.render-stat').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 60}ms`;
+});
+document.querySelectorAll('.detail-item').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 60}ms`;
+});
+
+revealElements.forEach((el) => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
