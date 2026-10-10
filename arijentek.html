@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arijentek & ISOFINITI | Rajabinandhan P G</title>
+  <title>ISOFINITI / Arijentek | Rajabinandhan P G</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -18,7 +18,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="castor.html">Castor</a></li>
-        <li><a href="arijentek.html" class="active">Arijentek</a></li>
+        <li><a href="arijentek.html" class="active">ISOFINITI</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="recovery.html">Recovery</a></li>
       </ul>
@@ -32,31 +32,65 @@
 
   <section class="page-hero">
     <div class="container">
-      <span class="label">Architecture Portfolio</span>
-      <h1>Arijentek / ISOFINITI Infrastructure</h1>
-      <p>This page expands the Arijentek and ISOFINITI work into a deeper architecture narrative: local-first LLM infrastructure, Module 2C voice services, Graphite RAG, dual-site operations, client delivery environments, and planned roadmap items.</p>
+      <span class="label">Lead Solutions & Infrastructure Architect · Oct 2024 – Present</span>
+      <h1>ISOFINITI / Arijentek</h1>
+      <p>I hand-built the company's GPU estate and run a fully local, multimodal AI platform on it. I also provide technical direction to a 20-person team across the US and India, from client discovery through delivery.</p>
       <div class="page-links">
-        <a href="#llm-platform" class="detail-link">LLM Platform</a>
-        <a href="#voice-engine" class="detail-link">Module 2C</a>
+        <a href="#hardware" class="detail-link">Hardware</a>
+        <a href="#llm-platform" class="detail-link">Model Fleet</a>
+        <a href="#delivery" class="detail-link">Client Delivery</a>
         <a href="#dual-site" class="detail-link">Dual-Site Infra</a>
-        <a href="#roadmap" class="detail-link">Planned Systems</a>
       </div>
       <div class="metric-grid">
         <div class="metric-card">
-          <strong>1M</strong>
-          <span>Shared Context</span>
+          <strong>300–500M</strong>
+          <span>Tokens / Month</span>
         </div>
         <div class="metric-card">
-          <strong>500+</strong>
-          <span>Aggregate Tok/S</span>
+          <strong>~80%</strong>
+          <span>Lower AI Spend</span>
         </div>
         <div class="metric-card">
-          <strong>21</strong>
-          <span>Client VMs</span>
+          <strong>20</strong>
+          <span>Person Team</span>
         </div>
         <div class="metric-card">
-          <strong>10</strong>
-          <span>Segmented VLANs</span>
+          <strong>0</strong>
+          <span>Cloud AI Calls</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="hardware">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Hardware</span>
+        <h2>Designed, Sourced, and Hand-Assembled</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>GPU Server Estate</h3>
+          <ul class="bullet-list">
+            <li>AMD EPYC and Ryzen hosts that I designed, sourced, and assembled myself.</li>
+            <li>GPUs: dual AMD Radeon AI PRO R9700, Radeon Pro V620, and NVIDIA RTX 5090.</li>
+            <li>Run as a two-host Proxmox cluster with GPU passthrough into isolated LXC containers.</li>
+            <li>An early single-R9700 vLLM node benchmarked at ~950 tok/s aggregate.</li>
+          </ul>
+          <div class="tag-row">
+            <span>AMD RDNA4</span>
+            <span>RTX 5090</span>
+            <span>Proxmox</span>
+            <span>PCIe Passthrough</span>
+          </div>
+        </div>
+        <div class="content-card">
+          <h3>Healthcare On-Prem Deployment</h3>
+          <ul class="bullet-list">
+            <li>Deployed a headless, on-premises local AI server for a HIPAA-regulated healthcare client.</li>
+            <li>All inference and data stay inside the client's own building.</li>
+            <li>Built on the same hardware and serving patterns as the internal platform.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -65,29 +99,26 @@
   <section class="content-section" id="llm-platform">
     <div class="container">
       <div class="section-header">
-        <span class="label">LLM Platform</span>
-        <h2>Self-Hosted Inference for a Distributed Team</h2>
+        <span class="label">Model Fleet</span>
+        <h2>A Fully Local, Multimodal AI Platform</h2>
       </div>
       <div class="content-grid">
         <div class="content-card">
-          <h3>What Was Built</h3>
-          <p>Built and deployed a compartmentalized local LLM platform for 10+ remote users, replacing cloud API usage with a shared internal inference system.</p>
+          <h3>Models in Production</h3>
           <ul class="bullet-list">
-            <li>Dual AMD Radeon AI PRO R9700 GPUs with 64GB combined VRAM.</li>
-            <li>Qwen3.6-35B via llama.cpp Vulkan backend.</li>
-            <li>LiteLLM proxy with usage tracking, access control, and multi-user routing.</li>
-            <li>Open WebUI for direct human use and API-backed agent access.</li>
-            <li>Localized model serving with no external LLM API dependency.</li>
+            <li><strong>Language:</strong> two Mixture-of-Experts and two dense LLMs, including Qwen3.6-35B-A3B and Qwen3.8-27B with multi-token prediction, each tuned for its use case.</li>
+            <li><strong>Image and video:</strong> Ideogram 4.0 for images, LTX-2.3 for video.</li>
+            <li><strong>Voice:</strong> Whisper Large-v3 and SenseVoice for speech recognition, emotion2vec+ for speech emotion, and Kokoro for text-to-speech.</li>
+            <li>Every model's license was reviewed to confirm commercial use before deployment.</li>
           </ul>
         </div>
         <div class="content-card">
-          <h3>Operational Impact</h3>
+          <h3>Serving, Security, and Access</h3>
           <ul class="bullet-list">
-            <li>Supported a shared 1M-token context window and 10 parallel sessions.</li>
-            <li>Delivered 500+ tok/s aggregate throughput and up to 92 tok/s per user.</li>
-            <li>Ran roughly 3x higher TPS than frontier cloud model workflows for targeted tasks.</li>
-            <li>Localized an estimated $8K-$10K in cloud API credits.</li>
-            <li>Reduced turnaround time on targeted inference tasks by roughly 70%.</li>
+            <li>llama.cpp (Vulkan / ROCm / CUDA builds) and vLLM, behind a LiteLLM gateway.</li>
+            <li>LiteLLM is the security and access layer: per-user keys, guardrails, and routing each workload to the right model.</li>
+            <li>Served to US and India teams through Open WebUI over Tailscale.</li>
+            <li>Zero external cloud AI calls.</li>
           </ul>
         </div>
       </div>
@@ -102,28 +133,24 @@
           </thead>
           <tbody>
             <tr>
-              <td>Users Served</td>
-              <td>10+ remote team members</td>
+              <td>Users</td>
+              <td>20 across US and India</td>
             </tr>
             <tr>
-              <td>Context</td>
-              <td>1M shared context</td>
+              <td>Monthly Volume</td>
+              <td>300–500M tokens</td>
             </tr>
             <tr>
-              <td>Parallel Sessions</td>
-              <td>10</td>
+              <td>Monthly AI Cost</td>
+              <td>$4K–$5K cloud → ~$700–$900 (subscriptions + power)</td>
             </tr>
             <tr>
-              <td>Aggregate Throughput</td>
-              <td>500+ tok/s</td>
+              <td>Turnaround</td>
+              <td>~70% faster</td>
             </tr>
             <tr>
-              <td>Per-User Throughput</td>
-              <td>Up to 92 tok/s</td>
-            </tr>
-            <tr>
-              <td>Cost Outcome</td>
-              <td>$8K-$10K API usage localized</td>
+              <td>LLM Mix</td>
+              <td>2 MoE + 2 dense</td>
             </tr>
           </tbody>
         </table>
@@ -134,29 +161,51 @@
   <section class="content-section" id="voice-engine">
     <div class="container">
       <div class="section-header">
-        <span class="label">ISOFINITI v2</span>
-        <h2>Module 2C Voice Engine and Graphite RAG</h2>
+        <span class="label">Speech & 3D</span>
+        <h2>Voice Pipeline and 3D Production Infrastructure</h2>
       </div>
       <div class="content-grid">
         <div class="content-card">
-          <h3>Voice Engine Build</h3>
-          <p>Built ISOFINITI v2 Module 2C on LXC 101 with RTX 5090 as a local speech and voice service layer.</p>
+          <h3>On-Prem Speech and Voice Emotion</h3>
           <ul class="bullet-list">
-            <li>Whisper-Large-v3 with CUDA for speech-to-text.</li>
-            <li>Kokoro TTS for local text-to-speech.</li>
-            <li>FastAPI service on :8091 for STT and :8092 for TTS.</li>
-            <li>Streaming transcript endpoint and health probe endpoint.</li>
-            <li>Bot-detection heuristics and install automation with working code.</li>
+            <li>Speech recognition, speech emotion detection, and text-to-speech, all on local hardware.</li>
+            <li>Powers a working clinical documentation prototype that turns recorded consultations into draft notes.</li>
+            <li>Works fully with the network disconnected.</li>
+            <li>A streaming speech service built on FastAPI, with health monitoring, supports AI recruitment screening.</li>
           </ul>
         </div>
         <div class="content-card">
-          <h3>Graphite RAG</h3>
-          <p>Built a localized retrieval layer so knowledge workflows stayed inside firm-controlled infrastructure.</p>
+          <h3>3D Design Team Pipeline</h3>
           <ul class="bullet-list">
-            <li>Localized document retrieval instead of cloud-managed knowledge tooling.</li>
-            <li>Compartmentalized internal retrieval workflows for secure knowledge access.</li>
-            <li>Designed to support internal team usage without sending documents off-platform.</li>
-            <li>Positioned as part of a broader local-first AI operations stack.</li>
+            <li>GPU render farm built on Flamenco and Blender, replacing rented cloud GPU capacity.</li>
+            <li>Hunyuan3D 2.1 and CraftsMan3D generate base meshes for the in-house 3D design team.</li>
+            <li>AllTalk TTS for voiceover in brand and product content.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="delivery">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Solutions & Delivery</span>
+        <h2>From Client Meeting to Shipped Platform</h2>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Leadership and Client Work</h3>
+          <ul class="bullet-list">
+            <li>Provide technical direction to a 20-person engineering and creative team, working alongside the CTO.</li>
+            <li>Join client meetings, turn business needs into technical requirements, and plan the architecture before the build starts.</li>
+            <li>Own project-based infrastructure budgets.</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3>Platforms Delivered</h3>
+          <ul class="bullet-list">
+            <li><strong>Multi-entity healthcare platform:</strong> five businesses on one system in four months. Includes a supplies marketplace with USPS integration, HIPAA/PHI-compliant forms, client-managed content via CDN, and API automations.</li>
+            <li><strong>Gemora360:</strong> a multi-vendor, multi-location jewelry POS/ERP with inventory and HRM, built on Frappe/ERPNext over nine months. I owned the infrastructure end to end, including researching and negotiating with payment providers.</li>
           </ul>
         </div>
       </div>
@@ -167,101 +216,31 @@
     <div class="container">
       <div class="section-header">
         <span class="label">Infrastructure</span>
-        <h2>Dual-Site Operations, Client Delivery, and Backup Design</h2>
+        <h2>Dual-Site Operations, Client Environments, and Backups</h2>
       </div>
       <div class="content-grid">
         <div class="content-card">
           <h3>Dual-Site Footprint</h3>
           <ul class="bullet-list">
-            <li>Operations spanning Illinois, USA and Tamil Nadu, India.</li>
-            <li>Three Proxmox hosts across the estate.</li>
-            <li>10 segmented VLANs connected through UniFi Site Magic and WireGuard.</li>
-            <li>31 virtual machines, 4+ LXC containers, and multiple shared internal services.</li>
-            <li>Designed for cross-border operations, backup resilience, and secure service isolation.</li>
+            <li>Operations span Illinois, USA and Tamil Nadu, India.</li>
+            <li>Site-to-site tunneling via UniFi Site Magic and WireGuard.</li>
+            <li>Segmented VLANs, with services isolated in containers behind a managed reverse proxy.</li>
           </ul>
         </div>
         <div class="content-card">
           <h3>Fonespot Client Environment</h3>
           <ul class="bullet-list">
-            <li>21 VMs across dev, QA, staging, and production.</li>
-            <li>Dedicated database servers and Jenkins CI/CD.</li>
-            <li>Network-isolated environments for safer client delivery.</li>
-            <li>12+ application stacks and multi-host deployment patterns.</li>
-            <li>Structured to let a lean technical team support full-lifecycle delivery.</li>
+            <li>21 VMs across isolated Dev, QA, Staging, and Production environments.</li>
+            <li>3 Proxmox hosts and 10 VLANs.</li>
+            <li>Jenkins CI/CD automating deployment for 12+ application stacks.</li>
           </ul>
         </div>
         <div class="content-card">
-          <h3>Storage, Backup, and Recovery</h3>
+          <h3>Backup and Recovery</h3>
           <ul class="bullet-list">
-            <li>3-2-1 style backup thinking with Proxmox Backup Server and Unraid NAS.</li>
-            <li>Cross-continent deduplicated backup replication patterns.</li>
-            <li>Designed for rapid recovery, cross-site protection, and low operational overhead.</li>
+            <li>3-2-1 backup architecture with Proxmox Backup Server and Unraid NAS.</li>
+            <li>Deduplicated replication across continents.</li>
           </ul>
-        </div>
-        <div class="content-card">
-          <h3>AI and Rendering Extensions</h3>
-          <ul class="bullet-list">
-            <li>RTX 5090 AI inference environment for FLUX.2, Hunyuan3D 2.1, and TRELLIS2.</li>
-            <li>Distributed render farm using Flamenco 3.9 and Blender.</li>
-            <li>On-prem compute footprint positioned as the equivalent of $10K+ monthly cloud GPU usage.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section" id="platform-design">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Platform Design</span>
-        <h2>ISOFINITI Recruitment Platform Architecture</h2>
-      </div>
-      <div class="content-grid">
-        <div class="content-card">
-          <h3>Platform Capabilities</h3>
-          <ul class="bullet-list">
-            <li>Multi-tenant architecture with RBAC and role-specific access control.</li>
-            <li>BIPA-compliant consent logging and audit trail design.</li>
-            <li>Candidate intake across Naukri, Indeed, and email workflows.</li>
-            <li>Deduplication using normalized identifiers and SHA-256 hashing.</li>
-            <li>Zero-hardcoded-secrets architecture through managed configuration patterns.</li>
-          </ul>
-        </div>
-        <div class="content-card">
-          <h3>Delivery and Team Enablement</h3>
-          <ul class="bullet-list">
-            <li>Built internal infrastructure patterns that let the team operate on secure, localized systems.</li>
-            <li>Partnered on team composition, resource planning, and infrastructure budgeting.</li>
-            <li>Reduced tooling dependence while improving delivery control and privacy posture.</li>
-            <li>Used local-first AI as the enabling layer instead of an external dependency stack.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section" id="roadmap">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Roadmap</span>
-        <h2>Designed but Not Yet Deployed</h2>
-      </div>
-      <div class="section-grid section-stack">
-        <div class="content-card">
-          <h3>SSO and Identity Centralization</h3>
-          <p>Planned central identity flows using Authentik, Microsoft 365, Vaultwarden, and stronger MFA-enforced access to reduce credential sprawl.</p>
-        </div>
-        <div class="content-card">
-          <h3>Formal Patch and Vulnerability Management</h3>
-          <p>Planned maintenance cadence, vulnerability scanning, and documented update windows across infrastructure, network devices, and application layers.</p>
-        </div>
-        <div class="content-card">
-          <h3>Dedicated India Office Infrastructure</h3>
-          <p>Designed office-grade physical infrastructure improvements including rack, power resilience, environmental controls, and more formal physical security.</p>
-        </div>
-        <div class="content-card">
-          <h3>Offsite Backup and Disaster Recovery Copy</h3>
-          <p>Planned true offsite backup resilience through secondary physical or cloud-backed encrypted copies and automated verification.</p>
         </div>
       </div>
       <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Return to main portfolio</a>
